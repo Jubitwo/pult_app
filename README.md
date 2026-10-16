@@ -27,7 +27,7 @@ Die zentralen Website-Einstellungen stehen in [`config.js`](./config.js):
 
 - **App Store:** die offiziellen Schaltflächen verwenden die Apple-Kurz-URL `https://apple.co/3SJPB01` und das bereitgestellte deutsche App-Store-Badge.
 - **Kontakt:** bestätigte öffentliche E-Mail-Adresse ergänzen.
-- **Domain:** endgültige Domain in `config.js` eintragen; Canonical- und Open-Graph-URL werden dann ergänzt. Domain und gegebenenfalls DNS-Einstellungen vor dem Launch prüfen.
+- **Domain:** `https://pult-app.de` ist für GitHub Pages eingerichtet. Die DNS-Einträge zeigen auf GitHub Pages; HTTPS wird nach Ausstellung des Zertifikats aktiviert. Die `www`-Adresse leitet auf die Hauptdomain weiter.
 - **Impressum und Datenschutz:** erst nach Klärung von Anbieter, Verantwortlichkeit und tatsächlichen Datenverarbeitungen auf geprüfte Rechtstexte verlinken. Die Website verlinkt derzeit auf keine nicht vorhandenen Rechtsseiten.
 - **Screenshots:** Bildzuordnungen und nicht verwendete Aufnahmen sind in [`assets/screenshots/README.md`](./assets/screenshots/README.md) dokumentiert. Nicht passende Timergrößen-Karten bleiben ohne Bild; es gibt keine Platzhalter.
 - **Hamster:** transparente Figuren erscheinen im Hero, in den drei Praxistipps, in der Nach-oben-Navigation und im Abschluss. Von den eingebundenen Figuren wird höchstens eine gleichzeitig eingeblendet; der Nach-oben-Button erscheint nach dem Scrollen.

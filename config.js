@@ -2,8 +2,7 @@ export const siteConfig = Object.freeze({
   appStoreUrl: "https://apple.co/3SJPB01",
   // TODO: Öffentliche Kontaktadresse eintragen.
   contactEmail: "",
-  // TODO: Eigene Domain eintragen, sobald sie feststeht.
-  domain: "",
+  domain: "https://pult-app.de",
   // TODO: Vor Veröffentlichung auf geprüfte Rechtstexte verlinken.
   legalNoticeUrl: "",
   privacyPolicyUrl: "",

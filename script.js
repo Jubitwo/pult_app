@@ -69,7 +69,7 @@ if (siteConfig.domain) {
     document.head.append(openGraphUrl);
     const openGraphImage = document.createElement("meta");
     openGraphImage.setAttribute("property", "og:image");
-    openGraphImage.content = new URL("./assets/screenshots/clean/hero-interface.png", window.location.href).href;
+    openGraphImage.content = new URL("./assets/screenshots/clean/sitzplan.png", window.location.href).href;
     document.head.append(openGraphImage);
   } catch (error) {
     console.error("Ungültiger Wert in siteConfig.domain:", error);
