@@ -14,17 +14,17 @@ Die Bildauswahl richtet sich nach dem sichtbaren Inhalt. Jede Aufnahme wird höc
 | #berichte | Kein Bild | Kein passender Bericht- oder Listen-Screenshot vorhanden |
 | #stundenplan | `clean/stundenplan.png` | Wochenansicht mit Vertretungen und freien Stunden |
 | #whiteboard | `clean/whiteboard-allgemein.png` | Whiteboard mit farbig beschriftetem Tafelbild |
-| #darstellung | `hell-dunkel-modus.png` | Gemeinsame Darstellung beider Modi |
+| #darstellung | `clean/modus-hell.png`, `clean/modus-dunkel.png` | Einzelansichten ohne Beschriftung und mit transparentem Außenbereich |
 | Timer-Größen | Kein Bild | Einheitliche schematische Inline-SVGs statt unpassender Ganzseiten-Aufnahmen |
 | Vorteile | Kein Screenshot | Vier Textkarten; ein Hamster-Icon, drei Linien-Icons |
 | Datenschutz und FAQ | Kein Screenshot | Textabschnitte und Kacheln |
-| #hinter-pult und Abschluss | Kein Screenshot | Vorhandene Hamster als Markenbegleiter |
+| Abschluss | Kein Screenshot | Der Abschluss-Hamster bleibt im Kontaktbereich sichtbar |
 
 ## Nicht verwendete Bilder
 
 - `clean/hero-interface.png` – Hauptansicht des Sitzplans; der iPad-Rahmen ist am rechten Rand abgeschnitten. Für den Hero wird stattdessen die vollständige Aufnahme `clean/sitzplan.png` verwendet.
 - `clean/whiteboard-frei.png` – zeigt ebenfalls ein Whiteboard, aber S8 soll genau ein Bild enthalten.
-- `clean/modus-hell.png` und `clean/modus-dunkel.png` – Einzelansichten; S9 verwendet stattdessen die gemeinsame Darstellung.
+- `hell-dunkel-modus.png` – gemeinsame Werbegrafik mit Beschriftungen; `#darstellung` verwendet die beiden bereinigten Einzelansichten.
 - `clean/pult-mark.png` – das große Doppel-Logo entfällt; das kleinere Logo bleibt im Header.
 - Die vollständige Werbegrafik `4.png` wird nicht eingebunden; `timer-klein.png` enthält nur den Screenshot-Ausschnitt ohne den Text darüber.
 - Beim neuen Timer-Foto wurde das iPad freigestellt; die Werbezeilen oberhalb und unterhalb sowie der Schatten wurden entfernt.
@@ -32,13 +32,12 @@ Die Bildauswahl richtet sich nach dem sichtbaren Inhalt. Jede Aufnahme wird höc
 
 Die Timer-Größenkarten enthalten keine Screenshots: Es gibt keine drei gleichartigen Ausschnitte (klein, mittel, groß), und der kleine Timer wäre in der vorhandenen Ganzseiten-Aufnahme kaum erkennbar. Der aussagekräftige Timer-Screenshot ist stattdessen als Bühnenbild in `#timer` eingebunden.
 
-Die Originaldateien aus `~/Downloads/Insta` sind 8538 × 6400 Pixel groß. Für die Website wurden die passenden Ausschnitte daraus in echten 2x- und 3x-Auflösungen erzeugt; es handelt sich nicht um hochskalierte 1x-Dateien. `index.html` bietet 1x-, 2x- und 3x-Kandidaten über `srcset` an. Der Browser wählt je nach Darstellungsgröße und Pixeldichte die passende Datei. Beim Timer ist die angezeigte Breite auf die Originalbreite begrenzt, damit das 782-Pixel-Bild auf 1x-Geräten nicht künstlich vergrößert wird. Ein Klick öffnet die jeweils gewählte Auflösung in der Dialog-Lightbox.
+Die Originaldateien aus `~/Downloads/Insta` sind 8538 × 6400 Pixel groß. Für die Website wurden passende Ausschnitte in hoher Auflösung erzeugt; es handelt sich nicht um hochskalierte 1x-Dateien. `index.html` bietet 1x- und 2x-Kandidaten über `srcset` an. Der Browser wählt je nach Pixeldichte die passende Datei. Für die beiden sauberen Hell-/Dunkel-Einzelansichten fehlen noch 2x-Dateien; bis dahin fällt die Seite auf die vorhandene 1x-Aufnahme zurück. Beim Timer ist die angezeigte Breite auf die Originalbreite begrenzt, damit das 782-Pixel-Bild auf 1x-Geräten nicht künstlich vergrößert wird. Ein Klick öffnet die jeweils gewählte Auflösung in der Dialog-Lightbox.
 
 | Darstellung | Screenshots | Timer |
 | --- | ---: | ---: |
 | 1x | 1025 px | 782 px |
 | 2x | 2050 px | 1564 px |
-| 3x | 3075 px | 2346 px |
 
 Die nicht verwendeten Quelldateien im übergeordneten Screenshot-Ordner bleiben erhalten. Neue Bildschirmaufnahmen hier mit beschreibenden, kleingeschriebenen Dateinamen ablegen. In `../index.html` immer relative Bildpfade, passende Alternativtexte, intrinsische `width`- und `height`-Angaben sowie die verfügbaren `srcset`-Kandidaten ergänzen.
 
