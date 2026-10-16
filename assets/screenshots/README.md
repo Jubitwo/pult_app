@@ -7,19 +7,18 @@ Die Bildauswahl richtet sich nach dem sichtbaren Inhalt. Jede Aufnahme wird höc
 | Sektion | Bilddatei | Inhalt |
 | --- | --- | --- |
 | Hero | `clean/sitzplan.png` | Vollständige Sitzplanansicht auf dem iPad mit Klassenübersicht und Auslosung |
-| S3 – Für die Klasse | `clean/sitzplan-auslosen.png` | Ausgeloste Person im hervorgehobenen Sitzplatz |
-| S4 – Timer | `timer-arbeitsauftrag.png` | iPad mit großem Timer, Arbeitsauftrag, Sozialform und Restzeit; ohne Werbetext |
-| S4 – Größenkarte Klein | `timer-klein.png` | Sitzplan-Ausschnitt mit dem kleinen Timer unten rechts |
-| S4 – Größenkarten Mittel und Groß | Kein Bild | Kein weiteres passendes, eigenständiges Timer-Bild vorhanden; das Großbild steht bereits oben in S4 |
-| S5 – Sitzplan | `clean/anwesenheit.png` | Anwesenheitsdialog über dem Sitzplan |
-| S6 – Noten | `clean/noten.png` | Farbige Notenfelder in der Klassenverwaltung |
-| S7 – Stundenplan | `clean/stundenplan.png` | Wochenansicht mit Vertretungen und freien Stunden |
-| S8 – Whiteboard | `clean/whiteboard-allgemein.png` | Whiteboard mit farbig beschriftetem Tafelbild |
-| S9 – Hell und Dunkel | `hell-dunkel-modus.png` | Gemeinsame Darstellung beider Modi |
-| S2 – Vorteile | Kein Bild | Textband ohne Bilder |
-| S10 – Datenschutz | Kein Bild | Textsektion |
-| S11 – Einfach starten | Kein Bild | Text und App-Store-Schaltfläche |
-| S12 – Abschluss und Footer | Kein Screenshot | Abschluss mit Hamster, danach Footer |
+| #klasse – Bühnenbild | `clean/sitzplan-auslosen.png` | Ausgeloste Person im hervorgehobenen Sitzplatz |
+| #timer – Bühnenbild | `timer-arbeitsauftrag.png` | Timer mit Arbeitsauftrag, Sozialform und Restzeit |
+| #sitzplan | `clean/anwesenheit.png` | Anwesenheitsdialog über dem Sitzplan |
+| #noten | `clean/noten.png` | Farbige Notenfelder in der Klassenverwaltung |
+| #berichte | Kein Bild | Kein passender Bericht- oder Listen-Screenshot vorhanden |
+| #stundenplan | `clean/stundenplan.png` | Wochenansicht mit Vertretungen und freien Stunden |
+| #whiteboard | `clean/whiteboard-allgemein.png` | Whiteboard mit farbig beschriftetem Tafelbild |
+| #darstellung | `hell-dunkel-modus.png` | Gemeinsame Darstellung beider Modi |
+| Timer-Größen | Kein Bild | Einheitliche schematische Inline-SVGs statt unpassender Ganzseiten-Aufnahmen |
+| Vorteile | Kein Screenshot | Vier Textkarten; ein Hamster-Icon, drei Linien-Icons |
+| Datenschutz und FAQ | Kein Screenshot | Textabschnitte und Kacheln |
+| #hinter-pult und Abschluss | Kein Screenshot | Vorhandene Hamster als Markenbegleiter |
 
 ## Nicht verwendete Bilder
 
@@ -31,6 +30,16 @@ Die Bildauswahl richtet sich nach dem sichtbaren Inhalt. Jede Aufnahme wird höc
 - Beim neuen Timer-Foto wurde das iPad freigestellt; die Werbezeilen oberhalb und unterhalb sowie der Schatten wurden entfernt.
 - Die nicht verwendeten Quelldateien im übergeordneten Screenshot-Ordner bleiben als Originale erhalten; für die Website werden die oben aufgeführten bereinigten Varianten verwendet. Ausnahme ist `hell-dunkel-modus.png`, die gemeinsame Darstellung für S9.
 
-Für die Timer-Karte „Klein“ wurde aus der neu bereitgestellten Grafik der iPad-Screenshot ausgeschnitten. Der kleine Timer bleibt darin unten rechts sichtbar. Die Karten „Mittel“ und „Groß“ haben kein eigenes Bild, weil es kein weiteres passendes Timer-Bild gibt und der große Timer bereits in der S4-Hauptsektion erscheint. Die Website zeigt keine „Screenshot fehlt“-Platzhalter.
+Die Timer-Größenkarten enthalten keine Screenshots: Es gibt keine drei gleichartigen Ausschnitte (klein, mittel, groß), und der kleine Timer wäre in der vorhandenen Ganzseiten-Aufnahme kaum erkennbar. Der aussagekräftige Timer-Screenshot ist stattdessen als Bühnenbild in `#timer` eingebunden.
+
+Es gibt derzeit keine 2x-Varianten. Die verwendeten Bilder werden nicht über ihre Quelldatei hinaus vergrößert; ein Klick öffnet die jeweilige Quelldatei in einer nativen Dialog-Lightbox. Alle Screenshot-Dateien im Projekt sind derzeit schmaler als 2000 px:
+
+| Breite | Dateien |
+| --- | --- |
+| 1025 px | `mitarbeit-gruppen.png`, `whiteboard.png`, `stundenplan.png`, `clean/anwesenheit.png`, `clean/timer-funktionen.png`, `clean/whiteboard-frei.png`, `clean/stundenplan.png`, `clean/modus-hell.png`, `clean/noten.png`, `clean/modus-dunkel.png`, `clean/sitzplan-auslosen.png`, `clean/whiteboard-allgemein.png`, `clean/sitzplan.png`, `anwesenheit-sitzplan.png`, `notenverwaltung.png`, `arbeitsauftrag-timer.png`, `sitzplan-uebersicht.png`, `hell-dunkel-modus.png` |
+| 830 px | `timer-klein.png` |
+| 782 px | `timer-arbeitsauftrag.png` |
+| 683 px | `hero-interface.png`, `clean/hero-interface.png` |
+| 212 px | `clean/pult-mark.png`, `pult-mark.png` |
 
 Neue Bildschirmaufnahmen hier mit beschreibenden, kleingeschriebenen Dateinamen ablegen. In `../index.html` immer relative Bildpfade, passende Alternativtexte sowie intrinsische `width`- und `height`-Angaben ergänzen.

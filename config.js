@@ -1,11 +1,8 @@
 export const siteConfig = Object.freeze({
   appStoreUrl: "https://apple.co/3SJPB01",
-  // TODO: Öffentliche Kontaktadresse eintragen.
-  contactEmail: "",
+  contactEmail: "hallo@pult-app.de",
   domain: "https://pult-app.de",
-  // TODO: Vor Veröffentlichung auf geprüfte Rechtstexte verlinken.
-  legalNoticeUrl: "",
-  privacyPolicyUrl: "",
-  // TODO: Nur tatsächlich verwendete Profile ergänzen.
-  socialLinks: [],
+  legalNoticeUrl: "./impressum.html",
+  privacyPolicyUrl: "./datenschutz.html",
+  socialLinks: [{ label: "@pult.app", url: "https://www.instagram.com/pult.app/" }],
 });

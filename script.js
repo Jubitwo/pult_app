@@ -1,4 +1,4 @@
-import { siteConfig } from "./config.js?v=app-store-link";
+import { siteConfig } from "./config.js?v=local-data-policy";
 
 document.documentElement.classList.add("js");
 
@@ -136,6 +136,14 @@ if ("IntersectionObserver" in window) {
 
 function updateToTopVisibility() {
   const viewportCenter = window.innerHeight / 2;
+  if (!("IntersectionObserver" in window)) {
+    visibleMascots.clear();
+    for (const mascot of mascots) {
+      const bounds = mascot.getBoundingClientRect();
+      if (bounds.bottom > 0 && bounds.top < window.innerHeight) visibleMascots.add(mascot);
+    }
+  }
+
   let activeMascot = null;
   let closestDistance = Infinity;
 
@@ -150,11 +158,50 @@ function updateToTopVisibility() {
   }
 
   for (const mascot of mascots) {
-    mascot.style.visibility = activeMascot && mascot !== activeMascot ? "hidden" : "";
+    const mascotFrame = mascot.closest(".mascot-circle") || mascot;
+    mascotFrame.style.visibility = activeMascot && mascot !== activeMascot ? "hidden" : "";
   }
 
-  toTop.hidden = window.scrollY < 500;
+  if (toTop) toTop.hidden = window.scrollY < 500;
 }
 
 window.addEventListener("scroll", updateToTopVisibility, { passive: true });
+window.addEventListener("resize", updateToTopVisibility);
 updateToTopVisibility();
+
+const lightbox = document.querySelector(".lightbox");
+
+if (lightbox instanceof HTMLDialogElement) {
+  const lightboxImage = lightbox.querySelector(".lightbox-image");
+  const lightboxCaption = lightbox.querySelector(".lightbox-caption");
+  const closeButton = lightbox.querySelector(".lightbox-close");
+  let lastTrigger = null;
+
+  document.querySelectorAll(".screenshot-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const image = trigger.querySelector("img");
+      if (!image) return;
+      lastTrigger = trigger;
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = image.alt;
+      lightbox.showModal();
+      closeButton.focus();
+    });
+  });
+
+  closeButton.addEventListener("click", () => lightbox.close());
+  lightbox.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      lightbox.close();
+    }
+  });
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+  lightbox.addEventListener("close", () => {
+    lightboxImage.removeAttribute("src");
+    if (lastTrigger?.isConnected) lastTrigger.focus({ preventScroll: true });
+  });
+}

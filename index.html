@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="PULT organisiert deinen Unterricht und zeigt deiner Klasse Sitzplan, Gruppen, Auslosung und Timer.">
+    <meta name="description" content="PULT organisiert Sitzplan, Mitarbeit, Timer, Noten und Stundenplan für deinen Unterricht auf dem iPad.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="de_DE">
     <meta property="og:title" content="PULT – dein digitales Lehrerpult">
     <meta property="og:description" content="Organisiere deinen Unterricht – und zeig deiner Klasse, was gerade zählt.">
     <title>PULT – dein digitales Lehrerpult</title>
     <link rel="icon" href="./assets/pult-logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="./assets/pult-logo.png">
     <link rel="stylesheet" href="./styles.css">
     <script type="module" src="./script.js"></script>
   </head>
@@ -31,10 +32,11 @@
           <a href="#timer">Timer</a>
           <a href="#sitzplan">Sitzplan</a>
           <a href="#noten">Noten</a>
+          <a href="#berichte">Berichte</a>
           <a href="#stundenplan">Stundenplan</a>
           <a href="#whiteboard">Whiteboard</a>
         </nav>
-        <a class="app-store-link header-store" href="#appstore" data-config-link="appStoreUrl" data-config-label="Im App Store laden"><img class="app-store-badge" src="./assets/app-store-badge-de.png" width="600" height="200" alt="Laden im App Store"></a>
+        <a class="app-store-link header-store" data-config-link="appStoreUrl" data-config-label="Im App Store laden"><img class="app-store-badge" src="./assets/app-store-badge-de.png" width="600" height="200" alt="Laden im App Store"></a>
       </div>
     </header>
 
@@ -42,88 +44,91 @@
       <section class="hero section-space" id="start" aria-labelledby="hero-title">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <div class="hero-brand">
-              <img class="hero-brand-icon" src="./assets/pult-logo.png" width="768" height="768" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
-              <div class="hero-brand-copy">
-                <span class="hero-brand-name">PULT</span>
-              </div>
-            </div>
             <h1 id="hero-title">Dein digitales Lehrerpult</h1>
             <p class="hero-description">Verwalte Sitzplan, Gruppen, Timer, Mitarbeit, Aufgaben, Anwesenheit, Noten und Stundenplan an einem Ort. Zeig deiner Klasse am Beamer, was ansteht.</p>
             <div class="hero-actions">
-              <a class="app-store-link" href="#appstore" data-config-link="appStoreUrl" data-config-label="Im App Store laden"><img class="app-store-badge" src="./assets/app-store-badge-de.png" width="600" height="200" alt="Laden im App Store"></a>
+              <a class="app-store-link" data-config-link="appStoreUrl" data-config-label="Im App Store laden"><img class="app-store-badge" src="./assets/app-store-badge-de.png" width="600" height="200" alt="Laden im App Store"></a>
               <a class="hero-secondary-link" href="#klasse">Funktionen entdecken <span aria-hidden="true">↓</span></a>
             </div>
             <div class="hero-note-row">
               <p class="availability-note"><span aria-hidden="true">✓</span> Eine Klasse kostenlos – dauerhaft.</p>
-              <img class="mascot-inline hero-mascot" src="./assets/hamster-lehrkraft.png" width="294" height="294" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
+              <span class="mascot-circle mascot-64"><img class="mascot-inline" src="./assets/hamsters/hamster-navigation.png" width="294" height="294" alt="" aria-hidden="true" fetchpriority="high" decoding="async"></span>
             </div>
           </div>
           <figure class="hero-visual">
-            <img src="./assets/screenshots/clean/sitzplan.png" width="1025" height="647" alt="Vollständiger PULT-Sitzplan auf dem iPad mit Klassenübersicht und Auslosung" fetchpriority="high" decoding="async">
+            <button class="screenshot-trigger" type="button" aria-label="Screenshot vergrößern: PULT-Sitzplan mit Klassenübersicht und Auslosung">
+              <img src="./assets/screenshots/clean/sitzplan.png" srcset="./assets/screenshots/clean/sitzplan.png 1025w" sizes="(min-width: 1440px) 760px, (min-width: 761px) 58vw, 100vw" width="1025" height="647" alt="Vollständiger PULT-Sitzplan auf dem iPad mit Klassenübersicht und Auslosung" fetchpriority="high" decoding="async">
+            </button>
           </figure>
         </div>
       </section>
 
-      <section class="advantages" aria-label="Vorteile von PULT">
+      <section class="advantages" aria-labelledby="advantages-title">
         <div class="container advantages-grid">
-          <article>
-            <h2>Für dich organisiert</h2>
-            <p>Mitarbeit, Hausaufgaben, Material, Anwesenheit und Noten per Tipp erfasst, statt auf Zetteln gesammelt.</p>
+          <h2 class="visually-hidden" id="advantages-title">Vorteile von PULT</h2>
+          <article class="advantage-card">
+            <span class="mascot-circle mascot-32"><img class="mascot-inline" src="./assets/hamsters/hamster-tipp-sitzplan.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>
+            <h3>Mit einem Tipp erfasst</h3>
+            <p>Mitarbeit, Hausaufgaben, Material und Anwesenheit hältst du direkt im Sitzplan fest – ohne Zettel und Strichlisten.</p>
           </article>
-          <article>
-            <h2>Für die Klasse sichtbar</h2>
-            <p>Sitzplan, Gruppen, Auslosung und Timer lassen sich projizieren, sodass deine Schülerinnen und Schüler direkt mitverfolgen können.</p>
+          <article class="advantage-card">
+            <span class="line-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1.5"></rect><path d="M8 21h8m-4-4v4"></path></svg></span>
+            <h3>Für die Klasse sichtbar</h3>
+            <p>Am Beamer sehen deine Schülerinnen und Schüler ihren Platz, ihre Gruppe, die Auslosung und den Timer mit Arbeitsauftrag.</p>
           </article>
-          <article>
-            <h2>Deine Daten bleiben bei dir</h2>
-            <p>Du entscheidest selbst: Daten nur auf deinem iPad oder mit iCloud-Sicherung.</p>
+          <article class="advantage-card">
+            <span class="line-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"></path><path d="M8 8h8m-8 4h8m-8 4h5"></path></svg></span>
+            <h3>Bereit für jede Konferenz</h3>
+            <p>Schülerinfos, Schülerberichte und Konferenzberichte hast du jederzeit griffbereit.</p>
+          </article>
+          <article class="advantage-card">
+            <span class="line-icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"></path><path d="M9 12h6"></path></svg></span>
+            <h3>Deine Daten, deine Wahl</h3>
+            <p>Die von dir eingegebenen Inhalte werden ausschließlich lokal auf deinem iPad gespeichert.</p>
           </article>
         </div>
       </section>
+
+      <header class="feature-chapter container">
+        <span class="mascot-circle mascot-64"><img class="mascot-inline" src="./assets/hamsters/hamster-tipp-sitzplan.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>
+        <div><p class="eyebrow">Im Unterricht</p><h2>Sitzplan, Noten, Planung</h2></div>
+      </header>
 
       <div class="feature-list container">
-        <section class="feature-row" id="klasse" aria-labelledby="klasse-title">
-          <figure class="feature-visual">
-            <img src="./assets/screenshots/clean/sitzplan-auslosen.png" width="1025" height="647" alt="Sitzplan in PULT mit hervorgehobenem, ausgelostem Schüler" loading="lazy" decoding="async">
-          </figure>
-          <div class="feature-copy">
-            <p class="eyebrow">Für die Klasse</p>
-            <h2 id="klasse-title">Deine Klasse sieht mit.</h2>
-            <p class="feature-lead">Weniger erklären, mehr unterrichten.</p>
-            <p>Zeig den Sitzplan am Beamer oder Display: Jede Schülerin und jeder Schüler findet sofort den eigenen Platz und die eigene Gruppe. Lose live aus, wer als Nächstes dran ist. Das ist fair und für alle nachvollziehbar. Der Timer läuft dabei sichtbar mit.</p>
-            <ul>
-              <li>Sitzplätze für alle sichtbar – auch nach jedem Umsetzen</li>
-              <li>Gruppen bilden und direkt anzeigen</li>
-              <li>Auslosung live vor der Klasse</li>
-              <li>Timer läuft im Sitzplan sichtbar mit</li>
-            </ul>
-            <aside class="tip-box">
-              <img class="mascot-inline" src="./assets/hamsters/hamster-tipp-sitzplan.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async">
-              <p>Tipp: Spiegle dein iPad an den Beamer. So sieht die Klasse Sitzplan, Gruppen und Timer, während du weiterarbeitest.</p>
-            </aside>
+        <section class="feature-stage" id="klasse" aria-labelledby="klasse-title">
+          <div class="stage-copy">
+            <div class="feature-copy">
+              <h2 id="klasse-title">Die Klasse sieht ihren Platz, ihre Gruppe und die Zeit.</h2>
+              <p>Zeig den Sitzplan am Beamer oder Display: Jede Schülerin und jeder Schüler findet sofort den eigenen Platz und die eigene Gruppe. Lose live aus, wer als Nächstes dran ist. Das ist fair und für alle nachvollziehbar. Der Timer läuft dabei sichtbar mit.</p>
+            </div>
           </div>
+          <figure class="feature-visual">
+            <button class="screenshot-trigger" type="button" aria-label="Screenshot vergrößern: Auslosung im PULT-Sitzplan">
+              <img src="./assets/screenshots/clean/sitzplan-auslosen.png" srcset="./assets/screenshots/clean/sitzplan-auslosen.png 1025w" sizes="100vw" width="1025" height="647" alt="Sitzplan in PULT mit hervorgehobenem, ausgelostem Schüler" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <aside class="tip-box">
+            <span class="mascot-circle mascot-32"><img class="mascot-inline" src="./assets/hamsters/hamster-tipp-sitzplan.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>
+            <p>Tipp: Spiegle dein iPad an den Beamer. So sieht die Klasse Sitzplan, Gruppen und Timer, während du weiterarbeitest.</p>
+          </aside>
         </section>
 
-        <section class="feature-row feature-row-reverse" id="timer" aria-labelledby="timer-title">
-          <figure class="feature-visual">
-            <img src="./assets/screenshots/timer-arbeitsauftrag.png" width="782" height="603" alt="PULT-Timer mit Arbeitsauftrag, Einzelarbeit und verbleibender Zeit auf einem iPad" loading="lazy" decoding="async">
-          </figure>
-          <div class="feature-copy">
-            <p class="eyebrow">Für jede Arbeitsphase</p>
-            <h2 id="timer-title">Ein Timer, der den Arbeitsauftrag gleich mitbringt.</h2>
-            <p>Vergrößere den Timer und deine Klasse sieht auf einen Blick, was zu tun ist: Arbeitsauftrag, Sozialform (Einzel-, Partner- oder Gruppenarbeit), Extras wie „Musik hören erlaubt“ und die verbleibende Zeit. So entfallen Rückfragen, und alle wissen, worauf es ankommt.</p>
-            <ul>
-              <li>Arbeitsauftrag direkt im Timer anzeigen</li>
-              <li>Einzel-, Partner- oder Gruppenarbeit auf einen Blick</li>
-              <li>Extras wie Musik hören klar kommuniziert</li>
-              <li>Läuft überall weiter – im Sitzplan, im Whiteboard, in jeder Ansicht</li>
-            </ul>
-            <aside class="tip-box">
-              <img class="mascot-inline" src="./assets/hamsters/hamster-tipp-timer.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async">
-              <p>Tipp: Starte den Timer und wechsle ruhig ins Whiteboard – er läuft einfach weiter.</p>
-            </aside>
+        <section class="feature-stage" id="timer" aria-labelledby="timer-title">
+          <div class="stage-copy">
+            <div class="feature-copy">
+              <h2 id="timer-title">Arbeitsauftrag und Zeit bleiben im Blick.</h2>
+              <p>Vergrößere den Timer und deine Klasse sieht auf einen Blick, was zu tun ist: Arbeitsauftrag, Sozialform (Einzel-, Partner- oder Gruppenarbeit), Extras wie „Musik hören erlaubt“ und die verbleibende Zeit. Der Timer läuft in Sitzplan und Whiteboard weiter.</p>
+            </div>
           </div>
+          <figure class="feature-visual">
+            <button class="screenshot-trigger" type="button" aria-label="Screenshot vergrößern: Timer mit Arbeitsauftrag">
+              <img src="./assets/screenshots/timer-arbeitsauftrag.png" srcset="./assets/screenshots/timer-arbeitsauftrag.png 782w" sizes="100vw" width="782" height="603" alt="PULT-Timer mit Arbeitsauftrag, Einzelarbeit und verbleibender Zeit auf einem iPad" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <aside class="tip-box">
+            <span class="mascot-circle mascot-32"><img class="mascot-inline" src="./assets/hamsters/hamster-tipp-timer.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>
+            <p>Tipp: Starte den Timer und wechsle ruhig ins Whiteboard – er läuft einfach weiter.</p>
+          </aside>
         </section>
 
         <section class="timer-size-section" aria-labelledby="timer-sizes-title">
@@ -132,17 +137,17 @@
           </header>
           <div class="timer-cards">
             <article class="timer-card">
-              <figure class="feature-visual timer-card-visual">
-                <img src="./assets/screenshots/timer-klein.png" width="830" height="641" alt="Kleiner laufender Timer unten rechts im PULT-Sitzplan" loading="lazy" decoding="async">
-              </figure>
+              <svg class="timer-size-icon" viewBox="0 0 120 64" aria-hidden="true"><rect x="2" y="30" width="32" height="24" rx="3"></rect><rect x="42" y="19" width="38" height="35" rx="3"></rect><rect x="88" y="5" width="30" height="49" rx="3"></rect></svg>
               <h3>Klein</h3>
               <p>Läuft dezent am Rand weiter, während du Noten einträgst oder die nächste Stunde vorbereitest.</p>
             </article>
             <article class="timer-card">
+              <svg class="timer-size-icon" viewBox="0 0 120 64" aria-hidden="true"><rect x="2" y="30" width="32" height="24" rx="3"></rect><rect x="42" y="19" width="38" height="35" rx="3"></rect><rect x="88" y="5" width="30" height="49" rx="3"></rect></svg>
               <h3>Mittel</h3>
               <p>Hier stellst du alles ein: Zeit, Arbeitsauftrag, Sozialform und Extras.</p>
             </article>
             <article class="timer-card">
+              <svg class="timer-size-icon" viewBox="0 0 120 64" aria-hidden="true"><rect x="2" y="30" width="32" height="24" rx="3"></rect><rect x="42" y="19" width="38" height="35" rx="3"></rect><rect x="88" y="5" width="30" height="49" rx="3"></rect></svg>
               <h3>Groß</h3>
               <p>Für die Klasse gemacht: gut lesbar am Beamer, mit allem, was die Schülerinnen und Schüler wissen müssen.</p>
             </article>
@@ -151,27 +156,24 @@
 
         <section class="feature-row" id="sitzplan" aria-labelledby="sitzplan-title">
           <figure class="feature-visual">
-            <img src="./assets/screenshots/clean/anwesenheit.png" width="1025" height="647" alt="Anwesenheitsdialog in PULT mit Status für anwesende, fehlende und verspätete Schüler" loading="lazy" decoding="async">
+            <button class="screenshot-trigger" type="button" aria-label="Screenshot vergrößern: Anwesenheitsdialog">
+              <img src="./assets/screenshots/clean/anwesenheit.png" srcset="./assets/screenshots/clean/anwesenheit.png 1025w" sizes="(min-width: 761px) 58vw, 100vw" width="1025" height="647" alt="Anwesenheitsdialog in PULT mit Status für anwesende, fehlende und verspätete Schüler" loading="lazy" decoding="async">
+            </button>
           </figure>
           <div class="feature-copy">
-            <p class="eyebrow">Im Unterricht</p>
-            <h2 id="sitzplan-title">Ein Tipp statt Zettelwirtschaft.</h2>
+            <h2 id="sitzplan-title">Mitarbeit, Hausaufgaben, Anwesenheit – ein Tipp auf den Platz.</h2>
             <p>Tippe im Sitzplan auf den Platz einer Schülerin oder eines Schülers: Mitarbeit mit Plus, Minus oder Null bewerten, vergessene Hausaufgaben oder fehlendes Material vermerken. Die Anwesenheit erfasst du in Sekunden – anwesend, fehlend oder verspätet. Alles landet automatisch beim richtigen Kind.</p>
-            <ul>
-              <li>Mitarbeit mit Plus, Minus und Null</li>
-              <li>Hausaufgaben- und Materialkontrolle per Tipp</li>
-              <li>Anwesenheit: anwesend, fehlend, verspätet</li>
-            </ul>
           </div>
         </section>
 
         <section class="feature-row feature-row-reverse" id="noten" aria-labelledby="noten-title">
           <figure class="feature-visual">
-            <img src="./assets/screenshots/clean/noten.png" width="1025" height="647" alt="Notenübersicht einer Klasse in PULT mit farbigen Notenfeldern" loading="lazy" decoding="async">
+            <button class="screenshot-trigger" type="button" aria-label="Screenshot vergrößern: Notenübersicht">
+              <img src="./assets/screenshots/clean/noten.png" srcset="./assets/screenshots/clean/noten.png 1025w" sizes="(min-width: 761px) 58vw, 100vw" width="1025" height="647" alt="Notenübersicht einer Klasse in PULT mit farbigen Notenfeldern" loading="lazy" decoding="async">
+            </button>
           </figure>
           <div class="feature-copy">
-            <p class="eyebrow">Bewerten</p>
-            <h2 id="noten-title">Noten mit Überblick.</h2>
+            <h2 id="noten-title">Noten eintragen, Durchschnitt steht sofort da.</h2>
             <p>Trage schriftliche und mündliche Noten in einer übersichtlichen Tabelle ein. PULT berechnet die Durchschnitte nach deiner Gewichtung. So siehst du jederzeit, wo jede Schülerin, jeder Schüler und die ganze Klasse steht.</p>
             <ul>
               <li>Schriftliche und mündliche Leistungen getrennt</li>
@@ -181,37 +183,46 @@
           </div>
         </section>
 
+        <section class="feature-row" id="berichte" aria-labelledby="berichte-title">
+          <div class="feature-copy">
+            <h2 id="berichte-title">Gut vorbereitet in jedes Gespräch.</h2>
+            <p>Halte zu jeder Schülerin und jedem Schüler fest, was wichtig ist. Daraus erstellst du Schülerberichte für Elterngespräche und Konferenzberichte für die ganze Klasse, statt alles mühsam zusammenzusuchen. Für den Alltag legst du Klassenlisten an: Abhaklisten für Elternbriefe, Einverständniserklärungen oder eingesammeltes Geld und Notizlisten für alles andere.</p>
+            <ul>
+              <li>Wichtige Infos zu jedem Schüler festhalten</li>
+              <li>Schülerberichte für Elterngespräche</li>
+              <li>Konferenzberichte für die ganze Klasse</li>
+              <li>Abhaklisten und Notizlisten pro Klasse</li>
+            </ul>
+          </div>
+        </section>
+
         <section class="feature-row" id="stundenplan" aria-labelledby="stundenplan-title">
           <figure class="feature-visual">
-            <img src="./assets/screenshots/clean/stundenplan.png" width="1025" height="647" alt="Wochenstundenplan in PULT mit Kalenderterminen" loading="lazy" decoding="async">
+            <button class="screenshot-trigger" type="button" aria-label="Screenshot vergrößern: Wochenstundenplan">
+              <img src="./assets/screenshots/clean/stundenplan.png" srcset="./assets/screenshots/clean/stundenplan.png 1025w" sizes="(min-width: 761px) 58vw, 100vw" width="1025" height="647" alt="Wochenstundenplan in PULT mit Kalenderterminen" loading="lazy" decoding="async">
+            </button>
           </figure>
           <div class="feature-copy">
-            <p class="eyebrow">Planen</p>
             <h2 id="stundenplan-title">Deine Woche im Blick.</h2>
             <p>Dein Stundenplan zeigt dir jeden Tag, welche Klasse als Nächstes dran ist – inklusive Vertretungen und freier Stunden. Termine aus deinem Kalender erscheinen direkt im Stundenplan. Mit einem Tipp öffnest du die Stunde samt vorbereiteter Aufgaben und Tafelbild.</p>
-            <ul>
-              <li>Wochenübersicht mit Klassen, Vertretungen und freien Stunden</li>
-              <li>Kalendertermine direkt im Stundenplan</li>
-              <li>Stunde öffnen – mit Aufgaben und Tafelbild</li>
-            </ul>
           </div>
         </section>
 
         <section class="feature-row feature-row-reverse" id="whiteboard" aria-labelledby="whiteboard-title">
           <figure class="feature-visual">
-            <img src="./assets/screenshots/clean/whiteboard-allgemein.png" width="1025" height="647" alt="PULT-Whiteboard mit farbig beschriftetem Tafelbild" loading="lazy" decoding="async">
+            <button class="screenshot-trigger" type="button" aria-label="Screenshot vergrößern: PULT-Whiteboard">
+              <img src="./assets/screenshots/clean/whiteboard-allgemein.png" srcset="./assets/screenshots/clean/whiteboard-allgemein.png 1025w" sizes="(min-width: 761px) 58vw, 100vw" width="1025" height="647" alt="PULT-Whiteboard mit farbig beschriftetem Tafelbild" loading="lazy" decoding="async">
+            </button>
           </figure>
           <div class="feature-copy">
-            <p class="eyebrow">Visualisieren</p>
             <h2 id="whiteboard-title">Dein Tafelbild auf dem iPad.</h2>
             <p>Schreibe und zeichne mit dem Apple Pencil, und deine Klasse sieht am Beamer mit. Das <strong>freie Whiteboard</strong> ist sofort da für spontane Skizzen. Die <strong>Whiteboards im Stundenplan</strong> gehören fest zu einer Stunde. Du bereitest sie vor, entwickelst sie im Unterricht weiter und knüpfst beim nächsten Mal genau dort an. Der Timer läuft dabei sichtbar weiter.</p>
             <ul>
               <li>Freies Whiteboard für spontane Ideen</li>
               <li>Ein Tafelbild pro Stunde – vorbereitet und gespeichert</li>
-              <li>Timer bleibt im Whiteboard sichtbar</li>
             </ul>
             <aside class="tip-box">
-              <img class="mascot-inline" src="./assets/hamsters/hamster-tipp-whiteboard.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async">
+              <span class="mascot-circle mascot-32"><img class="mascot-inline" src="./assets/hamsters/hamster-tipp-whiteboard.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>
               <p>Tipp: Bereite dein Tafelbild schon am Vorabend in der passenden Stunde vor.</p>
             </aside>
           </div>
@@ -219,7 +230,9 @@
 
         <section class="feature-row" id="darstellung" aria-labelledby="darstellung-title">
           <figure class="feature-visual">
-            <img src="./assets/screenshots/hell-dunkel-modus.png" width="1025" height="768" alt="PULT im hellen und im dunklen Modus" loading="lazy" decoding="async">
+            <button class="screenshot-trigger" type="button" aria-label="Screenshot vergrößern: PULT im hellen und dunklen Modus">
+              <img src="./assets/screenshots/hell-dunkel-modus.png" srcset="./assets/screenshots/hell-dunkel-modus.png 1025w" sizes="(min-width: 761px) 58vw, 100vw" width="1025" height="768" alt="PULT im hellen und im dunklen Modus" loading="lazy" decoding="async">
+            </button>
           </figure>
           <div class="feature-copy">
             <h2 id="darstellung-title">Hell oder dunkel – wie du magst.</h2>
@@ -227,31 +240,65 @@
           </div>
         </section>
 
+        <section class="about-section" id="hinter-pult" aria-labelledby="about-title">
+          <span class="mascot-circle mascot-120"><img class="mascot-inline" src="./assets/hamster-lehrkraft.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>
+          <div class="data-copy">
+            <p class="eyebrow">Hinter PULT</p>
+            <h2 id="about-title">Aus dem Unterricht, für den Unterricht.</h2>
+            <!-- Bitte vor Veröffentlichung durch 2–3 Sätze über die Person hinter PULT ersetzen. -->
+            <p class="placeholder-copy">[PLATZHALTER – bitte von mir ausfüllen lassen: 2–3 Sätze, wer PULT entwickelt und warum.]</p>
+          </div>
+        </section>
+
         <section class="data-section" id="daten" aria-labelledby="daten-title">
           <div class="data-copy">
             <h2 id="daten-title">Deine Schülerdaten. Deine Entscheidung.</h2>
-            <p>Du wählst selbst, ob deine Daten nur auf diesem iPad bleiben oder per iCloud gesichert werden. Datensicherung und Wiederherstellung sind direkt in der App eingebaut.</p>
+            <p>Die App verarbeitet nur die Daten, die du selbst eingibst, zum Beispiel Sitzpläne, Namen von Schülerinnen und Schülern, Notizen und weitere planbezogene Informationen. Diese Inhalte werden ausschließlich lokal auf dem verwendeten Gerät gespeichert. Sie werden nicht automatisch an externe Server übertragen.</p>
+            <div class="data-options">
+              <article><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 18h4"></path></svg><h3>Nur auf diesem iPad</h3></article>
+              <article><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></svg><h3>Keine Cloud-Speicherung</h3></article>
+            </div>
+            <p class="update-note">App-Updates werden automatisch über den App Store bereitgestellt. Dafür kann eine indirekte Verbindung zu Apples Update-Diensten entstehen; die von dir eingegebenen Inhalte werden dabei nicht übertragen.</p>
           </div>
         </section>
 
         <section class="getting-started" id="appstore" aria-labelledby="starten-title">
           <div>
-            <h2 id="starten-title">Einfach ausprobieren.</h2>
-            <p>Starte mit einer Klasse – kostenlos und dauerhaft. Für weitere Klassen und Gruppen schaltest du die Vollversion mit einem einmaligen Kauf frei, ohne Abo.</p>
+            <h2 id="starten-title">PULT im App Store.</h2>
+            <p>Eine Klasse ist dauerhaft kostenlos. Weitere Klassen und Gruppen schaltest du mit einem einmaligen Kauf frei, ohne Abo.</p>
           </div>
-          <a class="app-store-link" href="#appstore" data-config-link="appStoreUrl" data-config-label="Im App Store laden"><img class="app-store-badge" src="./assets/app-store-badge-de.png" width="600" height="200" alt="Laden im App Store"></a>
+          <a class="app-store-link" data-config-link="appStoreUrl" data-config-label="Im App Store laden"><img class="app-store-badge" src="./assets/app-store-badge-de.png" width="600" height="200" alt="Laden im App Store"></a>
         </section>
       </div>
+
+      <section class="faq-section container" aria-labelledby="faq-title">
+        <h2 id="faq-title">Häufige Fragen</h2>
+        <details><summary>Was kostet PULT?</summary><p>Eine Klasse ist dauerhaft kostenlos. Weitere Klassen und Gruppen schaltest du mit einem einmaligen Kauf frei, ohne Abo.</p></details>
+        <details><summary>Welche Geräte brauche ich?</summary><p>PULT ist für das iPad gemacht.</p></details>
+        <details><summary>Wo liegen meine Daten?</summary><p>Die von dir eingegebenen Inhalte werden ausschließlich lokal auf dem verwendeten Gerät gespeichert. App-Updates kommen automatisch über den App Store; dabei können Apples Update-Dienste indirekt kontaktiert werden.</p></details>
+        <details><summary>Wie bekomme ich Hilfe?</summary><p>Schreib an <a href="mailto:hallo@pult-app.de">hallo@pult-app.de</a> oder folge <a href="https://www.instagram.com/pult.app/" target="_blank" rel="noopener">@pult.app auf Instagram</a> für Tipps.</p></details>
+      </section>
 
       <section class="closing-cta section-space" id="abschluss" aria-labelledby="closing-title">
         <div class="container closing-inner">
           <div>
-            <h2 id="closing-title">Fragen oder Ideen?</h2>
-            <p>Tipps zur Nutzung und Neuigkeiten zu PULT findest du auf Instagram unter <a href="https://www.instagram.com/pult.app/" target="_blank" rel="noopener noreferrer">@pult.app</a>.</p>
+            <h2 id="closing-title">Fragen, Ideen, Feedback?</h2>
+            <p>Schreib mir – ich lese jede Nachricht. Tipps zur Nutzung gibt es auf Instagram.</p>
+            <div class="contact-cards">
+              <a class="contact-card" href="mailto:hallo@pult-app.de?subject=PULT">
+                <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg></span>
+                <span><strong>E-Mail</strong><span>hallo@pult-app.de</span></span>
+              </a>
+              <a class="contact-card" href="https://www.instagram.com/pult.app/" target="_blank" rel="noopener">
+                <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="icon-fill" cx="17.5" cy="6.5" r="1"></circle></svg></span>
+                <span><strong>Instagram</strong><span>@pult.app</span></span>
+              </a>
+            </div>
           </div>
-          <img class="mascot-inline" src="./assets/hamsters/hamster-abschluss.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          <span class="mascot-circle mascot-120"><img class="mascot-inline" src="./assets/hamsters/hamster-abschluss.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async"></span>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
@@ -261,16 +308,21 @@
           <span>PULT</span>
         </a>
         <div class="footer-links" aria-label="Weitere Informationen">
-          <span class="footer-link-pending" data-config-link="contactEmail">Kontakt folgt</span>
-          <span class="footer-link-pending" data-config-link="legalNoticeUrl">Impressum folgt</span>
-          <span class="footer-link-pending" data-config-link="privacyPolicyUrl">Datenschutz folgt</span>
+          <a href="mailto:hallo@pult-app.de?subject=PULT" aria-label="Kontakt per E-Mail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span>Kontakt</span></a>
+          <a href="https://www.instagram.com/pult.app/" target="_blank" rel="noopener" aria-label="PULT auf Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="icon-fill" cx="17.5" cy="6.5" r="1"></circle></svg><span>Instagram</span></a>
+          <a href="./impressum.html">Impressum</a>
+          <a href="./datenschutz.html">Datenschutz</a>
         </div>
-        <nav class="social-links" aria-label="Soziale Netzwerke" data-social-links hidden></nav>
       </div>
     </footer>
 
     <a class="to-top" href="#start" aria-label="Nach oben" hidden>
-      <img src="./assets/hamsters/hamster-navigation.png" width="294" height="294" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img src="./assets/hamsters/hamster-navigation.png" width="294" height="294" alt="" aria-hidden="true" decoding="async">
     </a>
+    <dialog class="lightbox" aria-label="Screenshot in vergrößerter Ansicht">
+      <button class="lightbox-close" type="button" aria-label="Schließen">Schließen</button>
+      <img class="lightbox-image" alt="">
+      <p class="lightbox-caption"></p>
+    </dialog>
   </body>
 </html>
