@@ -137,7 +137,7 @@ h1, h2, h3 { letter-spacing: -.045em; }
 .feature-copy .feature-lead { margin-bottom: 13px; color: var(--brand); font-size: clamp(17px, 1.7vw, 21px); font-weight: 600; line-height: 1.4; }
 .feature-copy > p:not(.feature-lead, .eyebrow) { margin-bottom: 18px; color: var(--muted); font-size: 15px; }
 .feature-copy > .eyebrow { margin-bottom: 13px; }
-.feature-copy ul { gap: 6px; margin-top: 17px; font-size: 14px; }
+.feature-copy ul { gap: 6px; margin-top: 17px; padding-left: 0; font-size: 14px; list-style: none; }
 .feature-copy li { position: relative; padding-left: 26px; color: var(--muted); }
 .feature-copy li::before { position: absolute; top: .16em; left: 0; color: var(--brand); content: "✓"; font-weight: 800; }
 
