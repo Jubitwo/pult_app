@@ -298,6 +298,7 @@ h1, h2, h3 { letter-spacing: -.045em; }
 .stage-copy .feature-copy { max-width: 640px; }
 .stage-copy .feature-copy h2 { font-size: clamp(32px, 4vw, 48px); }
 .feature-stage .feature-visual .screenshot-trigger { width: min(100%, 1025px); margin-inline: auto; }
+.feature-stage .feature-visual img[width="782"] { max-width: 782px; margin-inline: auto; }
 
 .advantages-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .advantage-card { display: grid; grid-template-rows: 36px auto 1fr; align-content: start; gap: 10px; padding: 22px 18px; border: 1px solid var(--line); border-radius: 9px; background: #fff; }

@@ -32,14 +32,14 @@ Die Bildauswahl richtet sich nach dem sichtbaren Inhalt. Jede Aufnahme wird höc
 
 Die Timer-Größenkarten enthalten keine Screenshots: Es gibt keine drei gleichartigen Ausschnitte (klein, mittel, groß), und der kleine Timer wäre in der vorhandenen Ganzseiten-Aufnahme kaum erkennbar. Der aussagekräftige Timer-Screenshot ist stattdessen als Bühnenbild in `#timer` eingebunden.
 
-Es gibt derzeit keine 2x-Varianten. Die verwendeten Bilder werden nicht über ihre Quelldatei hinaus vergrößert; ein Klick öffnet die jeweilige Quelldatei in einer nativen Dialog-Lightbox. Alle Screenshot-Dateien im Projekt sind derzeit schmaler als 2000 px:
+Die Originaldateien aus `~/Downloads/Insta` sind 8538 × 6400 Pixel groß. Für die Website wurden die passenden Ausschnitte daraus in echten 2x- und 3x-Auflösungen erzeugt; es handelt sich nicht um hochskalierte 1x-Dateien. `index.html` bietet 1x-, 2x- und 3x-Kandidaten über `srcset` an. Der Browser wählt je nach Darstellungsgröße und Pixeldichte die passende Datei. Beim Timer ist die angezeigte Breite auf die Originalbreite begrenzt, damit das 782-Pixel-Bild auf 1x-Geräten nicht künstlich vergrößert wird. Ein Klick öffnet die jeweils gewählte Auflösung in der Dialog-Lightbox.
 
-| Breite | Dateien |
-| --- | --- |
-| 1025 px | `mitarbeit-gruppen.png`, `whiteboard.png`, `stundenplan.png`, `clean/anwesenheit.png`, `clean/timer-funktionen.png`, `clean/whiteboard-frei.png`, `clean/stundenplan.png`, `clean/modus-hell.png`, `clean/noten.png`, `clean/modus-dunkel.png`, `clean/sitzplan-auslosen.png`, `clean/whiteboard-allgemein.png`, `clean/sitzplan.png`, `anwesenheit-sitzplan.png`, `notenverwaltung.png`, `arbeitsauftrag-timer.png`, `sitzplan-uebersicht.png`, `hell-dunkel-modus.png` |
-| 830 px | `timer-klein.png` |
-| 782 px | `timer-arbeitsauftrag.png` |
-| 683 px | `hero-interface.png`, `clean/hero-interface.png` |
-| 212 px | `clean/pult-mark.png`, `pult-mark.png` |
+| Darstellung | Screenshots | Timer |
+| --- | ---: | ---: |
+| 1x | 1025 px | 782 px |
+| 2x | 2050 px | 1564 px |
+| 3x | 3075 px | 2346 px |
+
+Die nicht verwendeten Quelldateien im übergeordneten Screenshot-Ordner bleiben erhalten. Neue Bildschirmaufnahmen hier mit beschreibenden, kleingeschriebenen Dateinamen ablegen. In `../index.html` immer relative Bildpfade, passende Alternativtexte, intrinsische `width`- und `height`-Angaben sowie die verfügbaren `srcset`-Kandidaten ergänzen.
 
 Neue Bildschirmaufnahmen hier mit beschreibenden, kleingeschriebenen Dateinamen ablegen. In `../index.html` immer relative Bildpfade, passende Alternativtexte sowie intrinsische `width`- und `height`-Angaben ergänzen.
