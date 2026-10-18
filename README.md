@@ -37,3 +37,22 @@ Die zentralen Website-Einstellungen stehen in [`config.js`](./config.js):
 - **Berichte:** die Sektion `#berichte` kommt ohne Screenshot aus, da kein passender Berichts- oder Listen-Screenshot vorliegt.
 
 Vor dem Launch die fehlenden Rechtsangaben ergänzen und die Rechtstexte mit dem aktuellen Stand der App abgleichen.
+
+## Erklärvideos
+
+Die Video-Hinweise werden über [`assets/js/videos.js`](./assets/js/videos.js) gesteuert.
+Ein vorhandener Hamster wird nur ersetzt, wenn der jeweilige Slot einen Eintrag in
+`PULT_VIDEOS` hat. Ohne Eintrag oder ohne JavaScript bleibt das bisherige HTML unverändert.
+
+Ein weiteres Video ergänzen:
+
+1. MP4-Datei (H.264, bei Ton AAC) unter `assets/videos/` ablegen.
+2. In `PULT_VIDEOS` einen eindeutigen Schlüssel mit `src`, `titel`, `dauer` (z. B. `"0:55"`)
+   und `hinweis` ergänzen.
+3. Dem passenden Kapitelkopf `data-video-slot="derselbe-schluessel"` hinzufügen.
+   Direkte Kinder mit `.mascot` werden durch den Hinweis ersetzt; sonst wird er angehängt.
+
+Alle Hinweise nutzen denselben Dialog. Die Videodatei wird erst bei einem Klick geladen;
+beim Schließen wird die Wiedergabe gestoppt und die Quelle entfernt. Es werden keine
+externen Player, Cookies oder Trackingdienste eingebunden. Die erste Aufnahme bleibt
+in ihrer Originalqualität (1920 × 1080, rund 55 Sekunden).
