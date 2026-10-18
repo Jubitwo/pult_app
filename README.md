@@ -49,7 +49,10 @@ Ein weiteres Video ergänzen:
 1. MP4-Datei (H.264, bei Ton AAC) unter `assets/videos/` ablegen.
 2. In `PULT_VIDEOS` einen eindeutigen Schlüssel mit `src`, `titel`, `dauer` (z. B. `"0:55"`)
    und `hinweis` ergänzen.
-3. Dem passenden Kapitelkopf `data-video-slot="derselbe-schluessel"` hinzufügen.
+3. Unter dem passenden Erklärungstext ein leeres
+   `<div data-video-slot="derselbe-schluessel"></div>` ergänzen.
+   Ohne konfiguriertes Video bleibt es leer und nimmt keinen zusätzlichen Platz ein.
+   Alternativ kann das Attribut direkt an einem Kapitelkopf stehen.
    Direkte Kinder mit `.mascot` werden durch den Hinweis ersetzt; sonst wird er angehängt.
 
 Alle Hinweise nutzen denselben Dialog. Die Videodatei wird erst bei einem Klick geladen;
