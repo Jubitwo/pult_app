@@ -3,7 +3,7 @@
   const PULT_VIDEOS = {
     "sitzplan-noten-planung": {
       src: "assets/videos/sitzplan-noten-planung.mp4",
-      titel: "Sitzplan, Noten und Planung in PULT",
+      titel: "Sitzplan: Mitarbeit, Hausaufgaben, Anwesenheit & Gruppen",
       dauer: "0:55",
       hinweis: "Schau's dir an",
     },
