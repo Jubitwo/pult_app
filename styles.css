@@ -268,6 +268,16 @@ h1, h2, h3 { letter-spacing: -.045em; }
 .hero { overflow: visible; }
 .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; }
 .hero-copy h1 { font-size: clamp(56px, 6vw, 76px); line-height: 1.02; }
+.hero-copy { container-type: inline-size; }
+.hero-heading { display: flex; align-items: center; gap: 12px; }
+.hero-heading h1 { flex: 1; min-width: 0; }
+.hero-logo { display: none; flex: 0 0 90px; width: 90px; height: auto; object-fit: contain; }
+/* Nur einblenden, wenn neben dem Logo die unveränderte zweizeilige Überschrift passt. */
+@media (min-width: 1100px) {
+  @container (min-width: 518px) {
+    .hero-logo { display: block; }
+  }
+}
 .hero-visual { width: 760px; max-width: none; align-self: center; overflow: visible; }
 .hero-visual .screenshot-trigger { width: 100%; }
 .hero-visual .screenshot-trigger img { position: static; width: 100%; max-width: none; height: auto; }
