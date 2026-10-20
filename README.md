@@ -29,7 +29,7 @@ Die zentralen Website-Einstellungen stehen in [`config.js`](./config.js):
 - **Kontakt:** `hallo@pult-app.de` und `@pult.app` sind in Abschluss, FAQ und Footer verknüpft.
 - **Domain:** `https://pult-app.de` ist für GitHub Pages eingerichtet. Die DNS-Einträge zeigen auf GitHub Pages; HTTPS wird nach Ausstellung des Zertifikats aktiviert. Die `www`-Adresse leitet auf die Hauptdomain weiter.
 - **Rechtliches:** [`datenschutz.html`](./datenschutz.html) beschreibt die Website und die App; [`impressum.html`](./impressum.html) markiert noch fehlende Angaben sichtbar. Die Datenschutzhinweise unterscheiden die ausschließlich lokale Speicherung der App-Inhalte von der indirekten Verbindung für automatische App-Updates über den App Store.
-- **Hinter PULT:** Der Abschnitt bleibt bis zur Ergänzung eines persönlichen Textes ausgeblendet.
+- **Hinter PULT:** Der persönliche Abschnitt erzählt von der Unterrichtspraxis, den Beweggründen für PULT und dem Leben außerhalb der Schule.
 - **Screenshots:** Bildzuordnungen, Quellauflösungen und nicht verwendete Aufnahmen sind in [`assets/screenshots/README.md`](./assets/screenshots/README.md) dokumentiert. Retina-Varianten liegen bei den jeweiligen Screenshots; Screenshots lassen sich per zugänglichem `<dialog>` vergrößern.
 - **Hamster:** vorhandene Figuren erscheinen in einheitlichen Kreisen mit 32, 64 oder 120 px Durchmesser. Im Sichtbereich wird höchstens ein Hamster gleichzeitig eingeblendet; der 40-px-Nach-oben-Button erscheint nach dem Scrollen.
 - **Open-Graph-Bild:** Der Sitzplan-Screenshot dient vorerst als Social-Vorschaubild.

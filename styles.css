@@ -433,8 +433,20 @@ h1, h2, h3 { letter-spacing: -.045em; }
 .timer-card h3 { margin: 0; }
 .timer-card > p { align-self: start; }
 
-.about-section { display: grid; grid-template-columns: 120px minmax(0, 1fr); align-items: center; gap: clamp(24px, 5vw, 64px); padding: clamp(30px, 5vw, 54px); border: 1px solid var(--line); border-radius: 10px; background: var(--surface-warm); }
-.about-section .data-copy { max-width: 820px; }
+.about-section { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: clamp(24px, 4vw, 52px); padding: clamp(28px, 5vw, 52px); border-radius: 10px; background: var(--surface-warm); }
+.about-illustration { min-width: 0; margin: 0; }
+.about-illustration img { display: block; width: 100%; height: auto; object-fit: contain; }
+.about-intro { max-width: 560px; }
+.about-intro h2 { margin-bottom: 14px; color: var(--brand-dark); font-size: clamp(32px, 3.5vw, 44px); font-weight: 650; line-height: 1.1; }
+.about-intro > p:last-child, .about-story p { margin: 0; color: var(--muted); }
+.about-story { display: grid; grid-column: 1 / -1; gap: 14px; max-width: 900px; }
+.about-story strong { color: var(--brand-dark); }
+@media (max-width: 900px) {
+  .about-section { grid-template-columns: 1fr; justify-items: stretch; gap: 24px; }
+  .about-illustration { width: min(100%, 650px); }
+  .about-intro { max-width: 650px; }
+  .about-story { grid-column: auto; }
+}
 .about-section .eyebrow { margin-bottom: 8px; }
 .data-section .data-copy { max-width: 920px; }
 .data-section .data-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 24px; }
@@ -551,7 +563,6 @@ h1, h2, h3 { letter-spacing: -.045em; }
   .feature-stage .feature-visual .screenshot-trigger { width: 100%; }
   .feature-stage .feature-visual img { max-width: 100%; }
   .feature-chapter { gap: 14px; }
-  .about-section { grid-template-columns: 1fr; justify-items: start; }
   .closing-inner { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .contact-cards { grid-template-columns: 1fr; }
   .data-section .data-options { grid-template-columns: 1fr; }
