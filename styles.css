@@ -274,7 +274,16 @@ h1, h2, h3 { letter-spacing: -.045em; }
 @media (min-width: 1400px) {
   .hero-heading { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 18px; }
   .hero-heading h1 { font-size: 64px; line-height: 1.02; }
-  .hero-logo { display: block; width: auto; height: 2.04em; font-size: 64px; object-fit: contain; }
+  .hero-logo {
+    display: block;
+    width: auto;
+    height: 2.04em;
+    font-size: 64px;
+    object-fit: contain;
+    /* Optisch an den Glyphen ausrichten, ohne die reservierte Layoutbreite zu ändern. */
+    transform: translateY(.15625em) scale(.9421);
+    transform-origin: top left;
+  }
 }
 .hero-visual { width: 760px; max-width: none; align-self: center; overflow: visible; }
 .hero-visual .screenshot-trigger { width: 100%; }
