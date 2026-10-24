@@ -18,8 +18,10 @@
     <link rel="icon" href="./assets/pult-logo.png" type="image/png">
     <link rel="apple-touch-icon" href="./assets/pult-logo.png">
     <link rel="stylesheet" href="./styles.css?v=hero-logo-optical-20261020">
+    <link rel="stylesheet" href="./assets/css/pult-ai-popup.css">
     <script type="module" src="./script.js"></script>
     <script src="./assets/js/videos.js" defer></script>
+    <script src="./assets/js/pult-ai-popup.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
@@ -353,6 +355,23 @@
       <button class="lightbox-close" type="button" aria-label="Schließen">Schließen</button>
       <img class="lightbox-image" alt="">
       <p class="lightbox-caption"></p>
+    </dialog>
+    <dialog class="pult-ai-dialog" id="pult-ai-dialog" aria-labelledby="pult-ai-titel" hidden>
+      <article class="pult-ai-card">
+        <button class="pult-ai-close" type="button" aria-label="Schließen" autofocus>×</button>
+        <div class="pult-ai-logo-frame">
+          <img src="./assets/Logo_PULT_AI_neu_Backround.png" width="768" height="768" alt="Logo von PULT AI">
+        </div>
+        <h2 id="pult-ai-titel">PULT bekommt Verstärkung: PULT AI fürs iPhone</h2>
+        <p class="pult-ai-subtitle">Bald im App Store.</p>
+        <ul class="pult-ai-features">
+          <li>„Was steht heute an?“: Stunden, Räume, Themen und Pausenaufsicht auf einen Blick</li>
+          <li>„Plus für Anna“, „Hake Tom beim Elternbrief ab“: Eintragen per Satz, PULT auf dem iPad übernimmt</li>
+          <li>Schülerberichte als PDF, Vermerke und Listen, auch zwischen zwei Stunden</li>
+        </ul>
+        <p class="pult-ai-security"><strong>Sicher von Anfang an:</strong> Ende-zu-Ende verschlüsselt über deine eigene iCloud, die KI arbeitet direkt auf dem iPhone. Kein Server, kein Tracking, keine Werbung.</p>
+        <button class="pult-ai-confirm" type="button">Verstanden</button>
+      </article>
     </dialog>
   </body>
 </html>

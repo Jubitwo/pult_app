@@ -1,0 +1,172 @@
+.pult-ai-dialog {
+  width: min(520px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 20px 70px rgb(0 0 0 / .24);
+}
+
+.pult-ai-dialog::backdrop {
+  background: rgb(0 0 0 / .45);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.pult-ai-open body {
+  position: fixed;
+  inset-inline: 0;
+  top: var(--pult-ai-scroll-top);
+  width: 100%;
+  overflow: hidden;
+}
+
+.pult-ai-dialog[open] .pult-ai-card {
+  animation: pult-ai-enter 230ms ease-out both;
+}
+
+.pult-ai-card {
+  position: relative;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 32px 28px;
+  text-align: center;
+}
+
+.pult-ai-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+  background: var(--surface);
+  font: inherit;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pult-ai-close:focus-visible,
+.pult-ai-confirm:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.pult-ai-logo-frame {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex: 0 0 120px;
+  overflow: hidden;
+  border-radius: 22.5%;
+  background: var(--surface-warm);
+  box-shadow: 0 1px 2px rgb(0 0 0 / .08), 0 8px 24px rgb(0 0 0 / .14), 0 24px 48px rgb(0 0 0 / .10);
+}
+
+.pult-ai-logo-frame::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .25);
+  content: "";
+  pointer-events: none;
+}
+
+.pult-ai-logo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pult-ai-card h2 {
+  max-width: 430px;
+  margin: 24px 0 8px;
+  color: var(--brand-dark);
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 650;
+  line-height: 1.15;
+}
+
+.pult-ai-subtitle {
+  margin: 0 0 18px;
+  color: var(--brand);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pult-ai-features {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  margin: 0 0 18px;
+  padding-left: 22px;
+  color: var(--muted);
+  text-align: left;
+}
+
+.pult-ai-security {
+  margin: 0 0 22px;
+  color: var(--muted);
+  text-align: left;
+}
+
+.pult-ai-security strong {
+  color: var(--brand-dark);
+}
+
+.pult-ai-confirm {
+  min-height: 48px;
+  margin-top: auto;
+  padding: 11px 28px;
+  border: 0;
+  border-radius: 6px;
+  color: var(--white);
+  background: var(--brand);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.pult-ai-confirm:hover {
+  background: var(--brand-dark);
+}
+
+@keyframes pult-ai-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .pult-ai-card { padding: 28px 20px 20px; }
+  .pult-ai-logo-frame { width: 96px; height: 96px; flex-basis: 96px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .pult-ai-dialog {
+    color-scheme: dark;
+    --ink: #e6f0f2;
+    --muted: #b5c7cc;
+    --line: #49636c;
+    --surface: #17303a;
+    --surface-warm: #203b45;
+    --brand: #26748a;
+    --brand-dark: #d6edf3;
+    --white: #ffffff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pult-ai-dialog[open] .pult-ai-card { animation: none; }
+}
