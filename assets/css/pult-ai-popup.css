@@ -126,17 +126,40 @@
   color: var(--brand-dark);
 }
 
-.pult-ai-confirm {
-  min-height: 48px;
+.pult-ai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
   margin-top: auto;
+}
+
+.pult-ai-more,
+.pult-ai-confirm {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
   padding: 11px 28px;
-  border: 0;
   border-radius: 6px;
-  color: var(--white);
-  background: var(--brand);
   font: inherit;
   font-weight: 650;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
+}
+
+.pult-ai-more {
+  border: 1px solid var(--line);
+  color: var(--brand-dark);
+  background: var(--surface);
+}
+
+.pult-ai-confirm {
+  border: 0;
+  color: var(--white);
+  background: var(--brand);
 }
 
 .pult-ai-confirm:hover {
@@ -151,6 +174,9 @@
 @media (max-width: 480px) {
   .pult-ai-card { padding: 28px 20px 20px; }
   .pult-ai-logo-frame { width: 96px; height: 96px; flex-basis: 96px; }
+  .pult-ai-actions { flex-direction: column; }
+  .pult-ai-more,
+  .pult-ai-confirm { width: 100%; }
 }
 
 @media (prefers-color-scheme: dark) {

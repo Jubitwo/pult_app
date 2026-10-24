@@ -1,0 +1,289 @@
+.ds-page {
+  max-width: 1280px;
+  padding-block: clamp(42px, 7vw, 82px) var(--section-space);
+}
+
+.ds-intro {
+  max-width: 850px;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.ds-intro h1 {
+  margin-bottom: 16px;
+  color: var(--brand-dark);
+  font-size: clamp(38px, 6vw, 62px);
+  line-height: 1.05;
+}
+
+.ds-lead {
+  max-width: 780px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.55;
+}
+
+.ds-principles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: var(--section-space);
+}
+
+.ds-principle,
+.ds-choice {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface-warm);
+}
+
+.ds-principle svg {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 14px;
+  fill: none;
+  stroke: var(--brand);
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ds-principle h2 {
+  margin-bottom: 8px;
+  color: var(--brand-dark);
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.ds-principle p,
+.ds-section > p:not(.eyebrow, .ds-footnote),
+.ds-choice p,
+.ds-contact p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.ds-section {
+  margin-top: clamp(52px, 7vw, 80px);
+  scroll-margin-top: 100px;
+}
+
+.ds-section h2,
+.ds-contact h2 {
+  margin-bottom: 14px;
+  color: var(--brand-dark);
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.12;
+}
+
+.ds-section > h3,
+.ds-choice h3 {
+  margin: 24px 0 12px;
+  color: var(--brand-dark);
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.ds-choice h3 { margin-top: 0; }
+
+.ds-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.ds-checklist {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+  padding: 0;
+  color: var(--muted);
+  list-style: none;
+}
+
+.ds-checklist > li {
+  position: relative;
+  padding-left: 28px;
+}
+
+.ds-checklist > li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--brand);
+  content: "✓";
+  font-weight: 800;
+}
+
+.ds-checklist ul {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+  padding-left: 22px;
+  list-style: disc;
+}
+
+.ds-checklist ul li { padding-left: 2px; }
+.ds-checklist ul li::before { content: none; }
+.ds-checklist a, .ds-contact a:not(.button) { color: var(--brand); }
+
+.ds-next {
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-warm);
+}
+
+.ds-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ds-section-heading .eyebrow { margin-bottom: 8px; }
+.ds-section-heading h2 { margin-bottom: 0; }
+
+.ds-badge {
+  flex: 0 0 auto;
+  padding: 7px 12px;
+  border-radius: 20px;
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ds-next > h3 { margin-top: 22px; }
+
+.ds-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.2fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+  margin: 28px 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface-warm);
+}
+
+.ds-flow-node {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  color: var(--brand-dark);
+  text-align: center;
+}
+
+.ds-flow-node svg {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: var(--brand);
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ds-flow-node span { color: var(--muted); font-size: 13px; }
+.ds-flow-cloud { padding: 12px 18px; border: 1px solid var(--line); border-radius: 9px; }
+.ds-flow-arrow { color: var(--brand); font-size: 24px; font-weight: 700; }
+
+.ds-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  scrollbar-color: var(--brand) var(--surface-warm);
+}
+
+.ds-table-wrap:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+
+.ds-table-wrap table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.ds-table-wrap th,
+.ds-table-wrap td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.ds-table-wrap thead th {
+  color: var(--brand-dark);
+  background: var(--surface-warm);
+  font-weight: 700;
+}
+
+.ds-table-wrap tbody th {
+  color: var(--brand-dark);
+  font-weight: 650;
+}
+
+.ds-table-wrap tbody tr:last-child th,
+.ds-table-wrap tbody tr:last-child td { border-bottom: 0; }
+
+.ds-footnote {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.ds-faq details {
+  border-top: 1px solid var(--line);
+}
+
+.ds-faq details:last-child { border-bottom: 1px solid var(--line); }
+
+.ds-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 4px;
+  color: var(--brand-dark);
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+.ds-faq summary::-webkit-details-marker { display: none; }
+.ds-faq summary::after { color: var(--brand); content: "+"; font-size: 22px; font-weight: 400; }
+.ds-faq details[open] summary::after { content: "−"; }
+.ds-faq details p { margin: 0; padding: 0 4px 18px; color: var(--muted); }
+
+.ds-contact {
+  margin-top: var(--section-space);
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: 10px;
+  background: var(--surface-warm);
+}
+
+.ds-contact .button { margin-top: 20px; }
+.ds-legal-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 22px; }
+
+@media (max-width: 1099px) {
+  .ds-principles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 767px) {
+  .ds-principles,
+  .ds-choice-grid { grid-template-columns: 1fr; }
+  .ds-principle,
+  .ds-choice { padding: 18px; }
+  .ds-section-heading { flex-direction: column; }
+  .ds-badge { white-space: normal; }
+  .ds-flow { grid-template-columns: 1fr; justify-items: center; }
+  .ds-flow-arrow { transform: rotate(90deg); }
+  .ds-flow-cloud { width: min(100%, 300px); }
+  .ds-contact .button { width: 100%; }
+}

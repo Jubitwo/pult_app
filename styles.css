@@ -544,7 +544,7 @@ h1, h2, h3 { letter-spacing: -.045em; }
   .hero-visual { width: 100%; max-width: 100%; }
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 1180px) {
   .header-inner { position: relative; gap: 14px; }
   .brand { order: 0; }
   .header-store { order: 1; width: 144px; margin-left: auto; }

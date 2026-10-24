@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Wie PULT und PULT AI Schülerdaten schützen: Speicherung auf dem iPad, verschlüsselte iCloud-Sicherung, Freigaben und App-Sperre.">
+    <title>Datensicherheit – PULT</title>
+    <link rel="icon" href="./assets/pult-logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="./assets/pult-logo.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./assets/css/datensicherheit.css">
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="PULT – zur Startseite">
+          <img src="./assets/pult-logo.png" width="52" height="52" alt="">
+          <span>PULT</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hauptnavigation">
+          <span class="menu-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menü öffnen</span>
+        </button>
+        <nav class="navigation" id="hauptnavigation" aria-label="Hauptnavigation">
+          <a href="./index.html#klasse">Für die Klasse</a>
+          <a href="./index.html#timer">Timer</a>
+          <a href="./index.html#sitzplan">Sitzplan</a>
+          <a href="./index.html#noten">Noten</a>
+          <a href="./index.html#berichte">Berichte</a>
+          <a href="./index.html#stundenplan">Stundenplan</a>
+          <a href="./index.html#whiteboard">Whiteboard</a>
+          <a href="./index.html#hinter-pult">Das Gesicht hinter PULT</a>
+          <a href="./datensicherheit.html" aria-current="page">Datensicherheit</a>
+        </nav>
+        <a class="app-store-link header-store" data-config-link="appStoreUrl" data-config-label="Im App Store laden"><img class="app-store-badge" src="./assets/app-store-badge-de.png" width="600" height="200" alt="Laden im App Store"></a>
+      </div>
+    </header>
+
+    <main id="inhalt" class="ds-page container">
+      <header class="ds-intro">
+        <p class="eyebrow">Datensicherheit</p>
+        <h1>Datensicherheit bei PULT</h1>
+        <p class="ds-lead">Schülerdaten sind sensibel. PULT ist deshalb so gebaut, dass deine Daten bei dir bleiben: auf deinem iPad – und wenn du es möchtest, verschlüsselt in deiner eigenen iCloud.</p>
+      </header>
+
+      <section class="ds-principles" aria-label="Die vier Kernaussagen">
+        <article class="ds-principle">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 18h4"></path></svg>
+          <h2>Bei dir gespeichert</h2>
+          <p>PULT speichert alles auf deinem iPad. Es gibt keinen PULT-Server und kein Benutzerkonto.</p>
+        </article>
+        <article class="ds-principle">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36"></path><path d="M3 4v5h5"></path><path d="m9 12 2 2 4-4"></path></svg>
+          <h2>Kein Tracking</h2>
+          <p>Keine Werbung, keine Analysedienste, keine Weitergabe an Dritte.</p>
+        </article>
+        <article class="ds-principle">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          <h2>Du entscheidest</h2>
+          <p>Ob und wo eine Sicherung entsteht, wählst du selbst. Jede Freigabe ist jederzeit zurücknehmbar.</p>
+        </article>
+        <article class="ds-principle">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path><circle cx="12" cy="15" r="1"></circle></svg>
+          <h2>Verschlüsselt</h2>
+          <p>Was in die iCloud geht, wird vorher auf deinem Gerät verschlüsselt. Nur deine Geräte haben den Schlüssel.</p>
+        </article>
+      </section>
+
+      <section class="ds-section" aria-labelledby="ds-ipad">
+        <p class="eyebrow">Heute</p>
+        <h2 id="ds-ipad">PULT auf dem iPad – heute</h2>
+        <p>Alle Daten – Klassen, Sitzpläne, Noten, Anwesenheit, Vermerke und Materialien – liegen auf dem iPad.</p>
+        <h3>Beim ersten Start wählst du</h3>
+        <div class="ds-choice-grid">
+          <article class="ds-choice">
+            <h3>„Nur auf diesem iPad“</h3>
+            <p>Schülerdaten verlassen das iPad nicht – auch das automatische iPad-Backup von iOS wird ausgeschlossen. Du sicherst selbst als Datei; PULT erinnert dich wöchentlich daran.</p>
+          </article>
+          <article class="ds-choice">
+            <h3>„Mit iPad-Backup“</h3>
+            <p>Das automatische iPad-Backup von iOS sichert die PULT-Daten mit.</p>
+          </article>
+        </div>
+        <ul class="ds-checklist">
+          <li>Eine manuelle Sicherung als Datei ist jederzeit möglich, zum Beispiel auf einen USB-Stick oder in die Dateien-App.</li>
+          <li>Mit der optionalen App-Sperre lässt sich PULT mit Face ID, Touch ID oder dem Gerätecode sperren (Einstellungen › Datenschutz). Beim Zurückkehren in die App ist dann eine Entsperrung nötig.</li>
+          <li><strong>Tipp:</strong> Ein Gerätecode auf dem iPad sorgt dafür, dass iOS die gespeicherten Daten verschlüsselt.</li>
+        </ul>
+      </section>
+
+      <section class="ds-section ds-next" aria-labelledby="ds-next-title">
+        <div class="ds-section-heading">
+          <div>
+            <p class="eyebrow">Geplant</p>
+            <h2 id="ds-next-title">Mit dem nächsten Update</h2>
+          </div>
+          <span class="ds-badge">Kommt mit dem nächsten Update</span>
+        </div>
+        <h3>Verschlüsselte iCloud-Sicherung – freiwillig</h3>
+        <ul class="ds-checklist">
+          <li>Eine neue Wahl „Zusätzlich in iCloud“ kommt hinzu. Der Standard bleibt „Nur auf diesem iPad“.</li>
+          <li>PULT sichert dann automatisch kurz nach Änderungen und beim Verlassen der App.</li>
+          <li>Alles wird auf dem iPad mit AES-256-GCM verschlüsselt, bevor es in deine private iCloud geht. Apple kann die Inhalte nicht lesen.</li>
+          <li>Der Schlüssel liegt in deinem iCloud-Schlüsselbund. Zusätzlich gibt es einen Wiederherstellungsschlüssel zum Ausdrucken – für ein neues iPad oder falls der Schlüsselbund fehlt. Bitte sicher aufbewahren: Ohne Schlüssel lässt sich die Sicherung nicht öffnen.</li>
+          <li>Eine Wiederherstellung ist auch auf einem neuen iPad möglich; die letzten Tage sind als Verlauf gesichert.</li>
+        </ul>
+      </section>
+
+      <section class="ds-section" aria-labelledby="ds-ai-title">
+        <p class="eyebrow">Demnächst</p>
+        <h2 id="ds-ai-title">PULT und PULT AI zusammen</h2>
+        <p>PULT AI ist der Assistent fürs iPhone und kommt bald: Du kannst fragen „Was steht heute an?“ oder Einträge per Satz formulieren, zum Beispiel „Plus für Anna“. PULT auf dem iPad übernimmt sie.</p>
+        <div class="ds-flow" aria-label="PULT auf dem iPad synchronisiert verschlüsselt über deine iCloud mit PULT AI auf dem iPhone">
+          <div class="ds-flow-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M10 18h4"></path></svg>
+            <strong>PULT auf dem iPad</strong>
+          </div>
+          <span class="ds-flow-arrow" aria-hidden="true">→</span>
+          <div class="ds-flow-node ds-flow-cloud">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h11a4 4 0 0 0 .5-8A6.5 6.5 0 0 0 6 8.5 4.75 4.75 0 0 0 7 18Z"></path><rect x="9" y="11" width="6" height="6" rx="1"></rect><path d="M10.5 11V9.5a1.5 1.5 0 0 1 3 0V11"></path></svg>
+            <strong>Deine iCloud</strong>
+            <span>Ende-zu-Ende verschlüsselt</span>
+          </div>
+          <span class="ds-flow-arrow" aria-hidden="true">→</span>
+          <div class="ds-flow-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 18h2"></path></svg>
+            <strong>PULT AI auf dem iPhone</strong>
+          </div>
+        </div>
+        <ul class="ds-checklist">
+          <li>Die Verbindung läuft nur über deine eigene iCloud und ist Ende-zu-Ende mit AES-256-GCM verschlüsselt. Der Schlüssel liegt in deinem iCloud-Schlüsselbund; ohne Schlüsselbund koppelst du einmal per QR-Code.</li>
+          <li>PULT bleibt Herr der Daten: PULT AI liest nur einen Auszug und schickt Änderungswünsche als Auftrag. Kleine Einträge übernimmt PULT sofort mit „Rückgängig“, alles andere bestätigst du.</li>
+          <li>Freigaben in PULT (Einstellungen › PULT AI) sind einzeln schaltbar und jederzeit zurücknehmbar:
+            <ul>
+              <li>Ohne Freigabe: nur Stundenplan, Klassen, Fächer, Themen und Pausen.</li>
+              <li>„Schülernamen“: Vorname und Initiale des Nachnamens, Anwesenheit und Plus/0/Minus des Tages sowie Listen.</li>
+              <li>„Vermerke“: Vermerke des laufenden Schuljahres.</li>
+              <li>„Noten und Berichte“: Noten verlassen das iPad nie als Daten – nur als Bericht-PDF, das du selbst anforderst. Es liegt höchstens 24 Stunden verschlüsselt in deiner iCloud und wird nach dem Abholen gelöscht.</li>
+            </ul>
+          </li>
+          <li>Auf dem iPhone liegen Chatverlauf und Berichte nur auf dem Gerät und werden nach 7 Tagen automatisch gelöscht. „Verlauf löschen“ löscht sie sofort.</li>
+          <li>Die KI arbeitet direkt auf dem iPhone (Apple Intelligence). Es gehen keine Daten an einen KI-Anbieter.</li>
+          <li>Es gibt eine Demo mit einer erfundenen Schule – zum Ausprobieren ohne eigene Daten.</li>
+        </ul>
+      </section>
+
+      <section class="ds-section" aria-labelledby="ds-table-title">
+        <p class="eyebrow">Datenübersicht</p>
+        <h2 id="ds-table-title">Welche Daten liegen wo?</h2>
+        <div class="ds-table-wrap" role="region" aria-label="Datenübersicht; auf kleinen Bildschirmen horizontal scrollbar" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Daten</th>
+                <th scope="col">Auf dem iPad</th>
+                <th scope="col">In deiner iCloud (verschlüsselt)</th>
+                <th scope="col">Auf dem iPhone (PULT AI)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Stundenplan, Klassen, Themen</th><td>Ja</td><td>Nur mit Sicherung bzw. PULT AI</td><td>Ja, mit PULT AI</td></tr>
+              <tr><th scope="row">Schülernamen</th><td>Ja</td><td>Nur mit Sicherung; für PULT AI nur mit Freigabe (Vorname + Initiale)</td><td>Nur mit Freigabe</td></tr>
+              <tr><th scope="row">Noten</th><td>Ja</td><td>Nur in der Sicherung</td><td>Nie – nur angeforderte Bericht-PDFs, 7 Tage</td></tr>
+              <tr><th scope="row">Vermerke</th><td>Ja</td><td>Nur mit Sicherung bzw. Freigabe</td><td>Nur mit Freigabe</td></tr>
+              <tr><th scope="row">Materialien</th><td>Ja</td><td>Nur in der Sicherung</td><td>Nein</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="ds-footnote">„Sicherung“ und „PULT AI“ kommen mit dem nächsten Update.</p>
+      </section>
+
+      <section class="ds-section" aria-labelledby="ds-teachers-title">
+        <p class="eyebrow">Für deinen Schulalltag</p>
+        <h2 id="ds-teachers-title">Hinweise für Lehrkräfte</h2>
+        <ul class="ds-checklist">
+          <li>Kläre mit deiner Schule bzw. der oder dem Datenschutzbeauftragten, ob und wie du Schülerdaten auf eigenen Geräten verarbeiten darfst. Die Regeln unterscheiden sich je nach Bundesland und Schule.</li>
+          <li>Für das Gespräch mit der Schule gibt es ein <a href="./assets/docs/PULT-Datenschutz-Infoblatt.pdf">Datenschutz-Infoblatt als PDF</a>.</li>
+          <li>Nutze einen Gerätecode und am besten die App-Sperre.</li>
+          <li>Wenn du die iCloud-Sicherung nutzt: Drucke den Wiederherstellungsschlüssel aus und bewahre ihn sicher auf.</li>
+          <li>Wenn du gar nichts in der Cloud möchtest, wähle „Nur auf diesem iPad“ und sichere regelmäßig als Datei.</li>
+        </ul>
+      </section>
+
+      <section class="ds-section ds-faq" aria-labelledby="ds-faq-title">
+        <p class="eyebrow">Noch Fragen?</p>
+        <h2 id="ds-faq-title">Häufige Fragen zur Datensicherheit</h2>
+        <details>
+          <summary>Kann der Entwickler meine Daten sehen?</summary>
+          <p>Nein. Es gibt keinen PULT-Server; deine Daten liegen auf deinen Geräten bzw. verschlüsselt in deiner iCloud.</p>
+        </details>
+        <details>
+          <summary>Kann Apple meine Daten in der iCloud lesen?</summary>
+          <p>Die PULT-Sicherung und die Verbindung zu PULT AI werden vorher auf deinem Gerät verschlüsselt; der Schlüssel liegt nur in deinem Schlüsselbund.</p>
+        </details>
+        <details>
+          <summary>Brauche ich ein Konto?</summary>
+          <p>Nein, nur deine Apple-ID wie bei jeder App.</p>
+        </details>
+        <details>
+          <summary>Was passiert, wenn ich eine Freigabe für PULT AI ausschalte?</summary>
+          <p>PULT entfernt die Daten beim nächsten Stand aus dem Austausch mit dem iPhone.</p>
+        </details>
+        <details>
+          <summary>Was passiert bei Verlust des iPads?</summary>
+          <p>Mit iCloud-Sicherung kannst du auf einem neuen iPad wiederherstellen (mit Schlüsselbund oder Wiederherstellungsschlüssel). Ohne iCloud-Sicherung stellst du aus deiner letzten Sicherungsdatei wieder her.</p>
+        </details>
+        <details>
+          <summary>Nutzt PULT AI ChatGPT oder eine andere Cloud-KI?</summary>
+          <p>Nein, die KI läuft direkt auf dem iPhone.</p>
+        </details>
+      </section>
+
+      <section class="ds-contact" aria-labelledby="ds-contact-title">
+        <h2 id="ds-contact-title">Fragen zur Datensicherheit?</h2>
+        <p>Schreib uns – Kontakt wie im Impressum.</p>
+        <a class="button button-dark" href="mailto:hallo@pult-app.de?subject=Frage%20zur%20Datensicherheit">Kontakt per E-Mail</a>
+        <div class="ds-legal-links">
+          <a href="./datenschutz.html">Datenschutzerklärung</a>
+          <a href="./impressum.html">Impressum</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <a class="brand footer-brand" href="./index.html" aria-label="PULT – zur Startseite">
+          <img src="./assets/pult-logo.png" width="42" height="42" alt="">
+          <span>PULT</span>
+        </a>
+        <div class="footer-links" aria-label="Weitere Informationen">
+          <a href="mailto:hallo@pult-app.de?subject=PULT" aria-label="Kontakt per E-Mail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span>Kontakt</span></a>
+          <a href="https://www.instagram.com/pult.app/" target="_blank" rel="noopener" aria-label="PULT auf Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="icon-fill" cx="17.5" cy="6.5" r="1"></circle></svg><span>Instagram</span></a>
+          <a href="./impressum.html">Impressum</a>
+          <a href="./datenschutz.html">Datenschutz</a>
+          <a href="./datensicherheit.html" aria-current="page">Datensicherheit</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -4,6 +4,7 @@
 
   const storageKey = "pultAiPopupGesehen-v1";
   const confirmButton = dialog.querySelector(".pult-ai-confirm");
+  const moreLink = dialog.querySelector(".pult-ai-more");
   const closeButton = dialog.querySelector(".pult-ai-close");
   let previouslyFocused = null;
   let previousScrollPosition = 0;
@@ -43,6 +44,7 @@
   else window.addEventListener("load", schedulePopup, { once: true });
 
   confirmButton.addEventListener("click", () => dialog.close());
+  moreLink.addEventListener("click", markPopupSeen);
   closeButton.addEventListener("click", () => dialog.close());
   dialog.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
