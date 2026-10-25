@@ -13,11 +13,16 @@
 
 .pai-logo {
   display: block;
-  width: clamp(170px, 26vw, 250px);
+  width: 330px;
+  max-width: 70vw;
   height: auto;
   margin-bottom: 18px;
   object-fit: contain;
   overflow: visible;
+}
+
+@media (max-width: 767px) {
+  .pai-logo { width: 220px; }
 }
 
 .pai-hero h1 {
