@@ -1,0 +1,221 @@
+.pai-page {
+  max-width: 1080px;
+  padding-block: clamp(36px, 7vw, 78px) var(--section-space);
+}
+
+.pai-hero {
+  display: grid;
+  justify-items: center;
+  max-width: 820px;
+  margin: 0 auto clamp(64px, 10vw, 112px);
+  text-align: center;
+}
+
+.pai-logo {
+  display: block;
+  width: clamp(170px, 26vw, 250px);
+  height: auto;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
+
+.pai-hero h1 {
+  margin: 0 0 6px;
+  color: var(--brand-dark);
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1.05;
+}
+
+.pai-subtitle {
+  margin: 0;
+  color: var(--brand);
+  font-size: clamp(20px, 3vw, 27px);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.pai-intro {
+  max-width: 760px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: clamp(17px, 2.2vw, 20px);
+}
+
+.pai-feature {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(32px, 7vw, 88px);
+  margin-top: clamp(56px, 9vw, 104px);
+}
+
+.pai-feature-reverse {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+}
+
+.pai-visual {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.pai-visual img {
+  display: block;
+  width: min(100%, 300px);
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: #1b232c;
+  box-shadow: 0 12px 34px rgb(23 60 72 / .12);
+}
+
+.pai-visual figcaption {
+  max-width: 340px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.pai-copy { min-width: 0; }
+
+.pai-copy h2,
+.pai-coming h2 {
+  margin-bottom: 16px;
+  color: var(--brand-dark);
+  font-size: clamp(29px, 4vw, 42px);
+  line-height: 1.1;
+}
+
+.pai-copy > p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.pai-copy ul {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 0;
+  color: var(--muted);
+  list-style: none;
+}
+
+.pai-copy li {
+  position: relative;
+  padding-left: 27px;
+}
+
+.pai-copy li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--brand);
+  content: "✓";
+  font-weight: 750;
+}
+
+.pai-privacy {
+  max-width: 850px;
+  margin: clamp(64px, 10vw, 112px) auto 0;
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--brand);
+  border-radius: 8px;
+  background: var(--surface-warm);
+}
+
+.pai-privacy p {
+  margin: 0;
+  color: var(--brand-dark);
+  font-size: clamp(17px, 2vw, 19px);
+  font-weight: 550;
+}
+
+.pai-coming {
+  max-width: 760px;
+  margin: clamp(56px, 8vw, 84px) auto 0;
+  text-align: center;
+}
+
+.pai-coming h2 { margin-bottom: 10px; }
+.pai-coming > p:last-child { margin: 0; color: var(--muted); }
+
+.pai-related {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: clamp(42px, 7vw, 72px);
+}
+
+.pai-related a,
+.pai-faq a,
+.pai-help-contact a {
+  color: var(--brand);
+  text-underline-offset: 4px;
+}
+
+.pai-help {
+  max-width: 860px;
+}
+
+.pai-help > .eyebrow { margin-bottom: 8px; }
+.pai-help > h1 {
+  margin-bottom: 12px;
+  color: var(--brand-dark);
+  font-size: clamp(38px, 6vw, 58px);
+  line-height: 1.08;
+}
+
+.pai-help-intro {
+  margin-bottom: clamp(28px, 5vw, 48px);
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.pai-faq details {
+  border-top: 1px solid var(--line);
+}
+
+.pai-faq details:last-child { border-bottom: 1px solid var(--line); }
+
+.pai-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 4px;
+  color: var(--brand-dark);
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+.pai-faq summary::-webkit-details-marker { display: none; }
+.pai-faq summary::after { color: var(--brand); content: "+"; font-size: 23px; font-weight: 400; }
+.pai-faq details[open] summary::after { content: "−"; }
+.pai-faq details p { margin: 0; padding: 0 4px 20px; color: var(--muted); }
+
+.pai-help-contact {
+  margin: 32px 0 0;
+  padding: 18px 20px;
+  border-radius: 8px;
+  color: var(--muted);
+  background: var(--surface-warm);
+}
+
+@media (max-width: 767px) {
+  .pai-feature,
+  .pai-feature-reverse {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .pai-feature-reverse .pai-visual { order: -1; }
+  .pai-visual img { width: min(72%, 270px); border-radius: 24px; }
+  .pai-related { flex-direction: column; align-items: center; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pai-page { scroll-behavior: auto; }
+}

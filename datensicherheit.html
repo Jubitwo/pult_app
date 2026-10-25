@@ -8,8 +8,8 @@
     <title>Datensicherheit – PULT</title>
     <link rel="icon" href="./assets/pult-logo.png" type="image/png">
     <link rel="apple-touch-icon" href="./assets/pult-logo.png">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./assets/css/datensicherheit.css">
+    <link rel="stylesheet" href="./styles.css?v=pult-ai-nav-20261025b">
+    <link rel="stylesheet" href="./assets/css/datensicherheit.css?v=pult-ai-privacy-20261025">
     <script type="module" src="./script.js"></script>
   </head>
   <body>
@@ -33,6 +33,7 @@
           <a href="./index.html#stundenplan">Stundenplan</a>
           <a href="./index.html#whiteboard">Whiteboard</a>
           <a href="./index.html#hinter-pult">Das Gesicht hinter PULT</a>
+          <a href="/pult-ai/">PULT AI</a>
           <a href="./datensicherheit.html" aria-current="page">Datensicherheit</a>
         </nav>
         <a class="app-store-link header-store" data-config-link="appStoreUrl" data-config-label="Im App Store laden"><img class="app-store-badge" src="./assets/app-store-badge-de.png" width="600" height="200" alt="Laden im App Store"></a>
@@ -43,8 +44,27 @@
       <header class="ds-intro">
         <p class="eyebrow">Datensicherheit</p>
         <h1>Datensicherheit bei PULT</h1>
-        <p class="ds-lead">Schülerdaten sind sensibel. PULT ist deshalb so gebaut, dass deine Daten bei dir bleiben: auf deinem iPad – und wenn du es möchtest, verschlüsselt in deiner eigenen iCloud.</p>
+        <p class="ds-lead">Lesbar liegen deine Daten nur auf deinen Geräten. Was über iCloud geht – Sicherung, Austausch mit PULT AI, Material und Ideen –, ist vorher Ende-zu-Ende verschlüsselt. Kein Server, kein Tracking, keine Cloud-KI.</p>
       </header>
+
+      <section class="ds-ai-privacy-cards" aria-label="Datenschutz bei PULT AI">
+        <article class="ds-ai-privacy-card">
+          <h2>Material vom iPhone an die Stunde</h2>
+          <p>Fotos, PDFs und Links, die du in PULT AI an eine Stunde sendest, verschlüsselt dein iPhone mit AES-256-GCM, bevor sie über deine iCloud zum iPad gehen. PULT legt sie in die Materialien der Stunde – auch fürs Whiteboard – und löscht sie danach aus iCloud. Fotos werden vorher verkleinert. Unser Tipp: keine Fotos, auf denen Schülerinnen und Schüler zu erkennen sind.</p>
+        </article>
+        <article class="ds-ai-privacy-card">
+          <h2>Ideenbuch</h2>
+          <p>Deine Unterrichtsideen liegen auf deinem iPhone. Damit sie einen Handywechsel überstehen, sichert PULT AI sie samt eigenen Arten und Feldern Ende-zu-Ende verschlüsselt in deiner iCloud – mit einem eigenen Schlüssel, den nur deine Geräte über den iCloud-Schlüsselbund kennen. In iCloud liegt nichts Lesbares, und die Sicherung lässt sich jederzeit abschalten und löschen. Ideen gehen nie automatisch an PULT oder an Dritte.</p>
+        </article>
+        <article class="ds-ai-privacy-card">
+          <h2>KI nur auf dem iPhone</h2>
+          <p>PULT AI nutzt Apple Intelligence direkt auf dem Gerät – keine Cloud-KI, kein Server. Im Ideenbuch liest die KI nur den Text der jeweiligen Idee und macht Vorschläge für Überschrift, Art und eigene Felder; übernommen wird erst, wenn du bestätigst. Ohne Apple Intelligence arbeitet PULT AI im Schnellmodus ganz ohne KI.</p>
+        </article>
+        <article class="ds-ai-privacy-card">
+          <h2>PULT AI und PULT</h2>
+          <p>Die Verbindung besteht nur, wenn du „Mit PULT AI verbinden“ in PULT auf dem iPad einschaltest. Schülernamen kommen nur nach deiner Freigabe gekürzt aufs iPhone: Vorname und Initiale. Vermerke und Berichte haben je eine eigene Freigabe. Bericht-PDFs liegen höchstens 24 Stunden verschlüsselt in iCloud. Der Chat-Verlauf wird nach 7 Tagen gelöscht. Fehlt der iCloud-Schlüsselbund, koppelst du iPhone und iPad einmal per QR-Code.</p>
+        </article>
+      </section>
 
       <section class="ds-principles" aria-label="Die vier Kernaussagen">
         <article class="ds-principle">
@@ -218,7 +238,8 @@
         <p>Schreib uns – Kontakt wie im Impressum.</p>
         <a class="button button-dark" href="mailto:hallo@pult-app.de?subject=Frage%20zur%20Datensicherheit">Kontakt per E-Mail</a>
         <div class="ds-legal-links">
-          <a href="./datenschutz.html">Datenschutzerklärung</a>
+          <a href="./datenschutz.html#pult-ai">Datenschutzerklärung zu PULT AI</a>
+          <a href="/pult-ai/hilfe/">Hilfe zu PULT AI</a>
           <a href="./impressum.html">Impressum</a>
         </div>
       </section>
@@ -236,6 +257,7 @@
           <a href="./impressum.html">Impressum</a>
           <a href="./datenschutz.html">Datenschutz</a>
           <a href="./datensicherheit.html" aria-current="page">Datensicherheit</a>
+          <a href="/pult-ai/">PULT AI</a>
         </div>
       </div>
     </footer>
