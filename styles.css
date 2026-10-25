@@ -67,6 +67,11 @@ h1, h2, h3 { letter-spacing: -.045em; }
 .navigation { display: flex; align-items: center; gap: clamp(10px, 1.2vw, 16px); }
 .navigation > a { color: var(--muted); font-size: 13px; text-decoration: none; white-space: nowrap; transition: color .18s ease; }
 .navigation > a:hover { color: var(--brand); }
+.navigation > .navigation-pult-ai { display: inline-flex; align-items: center; gap: 5px; color: var(--brand); font-weight: 600; }
+.navigation-pult-ai img { display: block; width: 22px; height: 22px; flex: 0 0 22px; object-fit: contain; }
+.navigation-new { padding: 1px 6px; border-radius: 999px; color: #fff; background: linear-gradient(110deg, #a77be6, #5aa8e0); font-size: 11px; font-weight: 700; line-height: 1.5; }
+.navigation > .navigation-pult-ai[aria-current="page"],
+.navigation > .navigation-pult-ai:hover { border-radius: 999px; background: rgb(32 91 110 / .08); }
 .menu-toggle { display: none; }
 .app-store-link { display: inline-flex; flex: 0 0 auto; align-items: center; border-radius: 5px; }
 .app-store-badge { display: block; width: 190px; height: auto; }
@@ -423,9 +428,9 @@ h1, h2, h3 { letter-spacing: -.045em; }
   .video-hint > img { width: 96px; }
   .video-hint-bubble { padding: 8px 10px; }
 }
-@media (min-width: 1181px) and (max-width: 1280px) {
+@media (min-width: 1181px) and (max-width: 1354px) {
   .header-inner { gap: 14px; }
-  .navigation { gap: 8px; }
+  .navigation { gap: 6px; }
 }
 /* Die übrige Website bleibt hell; Video-Bedienelemente folgen der Systemeinstellung. */
 @media (prefers-color-scheme: dark) {
@@ -548,7 +553,7 @@ h1, h2, h3 { letter-spacing: -.045em; }
   .hero-visual { width: 100%; max-width: 100%; }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1354px) {
   .header-inner { position: relative; gap: 14px; }
   .brand { order: 0; }
   .header-store { order: 1; width: 144px; margin-left: auto; }
