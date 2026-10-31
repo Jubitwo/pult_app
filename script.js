@@ -4,6 +4,7 @@ document.documentElement.classList.add("js");
 
 const linkSettings = {
   appStoreUrl: { value: siteConfig.appStoreUrl, label: "Im App Store laden", external: true },
+  pultAiAppStoreUrl: { value: siteConfig.pultAiAppStoreUrl, label: "PULT AI im App Store laden", external: true },
   contactEmail: { value: siteConfig.contactEmail, label: "Kontakt" },
   legalNoticeUrl: { value: siteConfig.legalNoticeUrl, label: "Impressum" },
   privacyPolicyUrl: { value: siteConfig.privacyPolicyUrl, label: "Datenschutz" },
@@ -19,7 +20,7 @@ function configuredHref(key, value) {
   try {
     const url = new URL(value, window.location.href);
     if (url.protocol !== "https:" && url.origin !== window.location.origin) return "";
-    if (key === "appStoreUrl" && url.protocol !== "https:") return "";
+    if ((key === "appStoreUrl" || key === "pultAiAppStoreUrl") && url.protocol !== "https:") return "";
     return value;
   } catch {
     return "";
@@ -100,26 +101,28 @@ if (socialLinks && siteConfig.socialLinks.length > 0) {
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#hauptnavigation");
 
-function setMenuOpen(open) {
-  menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.querySelector(".visually-hidden").textContent = open ? "Menü schließen" : "Menü öffnen";
-  navigation.classList.toggle("is-open", open);
-}
-
-menuToggle.addEventListener("click", () => {
-  setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
-});
-
-navigation.addEventListener("click", (event) => {
-  if (event.target.closest("a")) setMenuOpen(false);
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
-    setMenuOpen(false);
-    menuToggle.focus();
+if (menuToggle && navigation) {
+  function setMenuOpen(open) {
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.querySelector(".visually-hidden").textContent = open ? "Menü schließen" : "Menü öffnen";
+    navigation.classList.toggle("is-open", open);
   }
-});
+
+  menuToggle.addEventListener("click", () => {
+    setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  navigation.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+      setMenuOpen(false);
+      menuToggle.focus();
+    }
+  });
+}
 
 const toTop = document.querySelector(".to-top");
 const mascots = document.querySelectorAll(".mascot-inline");
