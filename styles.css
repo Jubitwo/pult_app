@@ -85,12 +85,7 @@ h1, h2, h3 { letter-spacing: -.045em; }
 .app-store-badge { display: block; width: 190px; height: auto; }
 .header-store { width: 144px; }
 .header-store .app-store-badge { width: 100%; }
-.header-store-ai { width: auto; gap: 8px; text-decoration: none; }
-.header-store-ai .app-store-badge { width: 144px; }
-.header-store-label { color: var(--muted); font-size: 12px; white-space: nowrap; }
-@media (max-width: 1354px) {
-  .header-store-label { display: none; }
-}
+.header-inner > .header-pult-ai { display: none; }
 
 .button {
   display: inline-flex;
@@ -701,4 +696,21 @@ img[src*="/assets/images/web/web-pult-"] { filter: drop-shadow(0 16px 28px rgba(
   }
   .pult-ai-page .hero-visual figcaption,
   .pult-ai-page .header-store { display: none; }
+}
+
+@media (max-width: 1199px) {
+  .header-inner:has(> .header-pult-ai) { flex-wrap: nowrap; }
+  .header-inner > .header-pult-ai { display: inline-flex; min-height: 44px; padding: 4px 10px; font-size: 15px; white-space: nowrap; }
+  .header-pult-ai img { width: 32px; height: 32px; flex-basis: 32px; }
+}
+
+@media (max-width: 767px) {
+  .header-inner > .header-pult-ai { margin-left: auto; }
+}
+
+@media (min-width: 768px) {
+  .pult-ai-page .hero-copy { justify-content: flex-start; padding-top: clamp(16px, 3vw, 40px); }
+  .pult-ai-page .hero-brand { gap: 24px; }
+  .pult-ai-page .hero-brand-icon { width: 124px; height: 124px; }
+  .pult-ai-page .hero-brand h1.hero-brand-name { font-size: clamp(52px, 7.5vw, 104px); }
 }
