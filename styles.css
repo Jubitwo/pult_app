@@ -89,6 +89,16 @@ h1, h2, h3 { letter-spacing: -.045em; }
 .header-cta[hidden] { display: none; }
 .header-cta.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
 .header-cta:hover { background: var(--brand); }
+@media (min-width: 1200px) {
+  .navigation { justify-content: flex-start; gap: clamp(6px, 1.2vw, 20px); }
+  .navigation > .navigation-link { flex: 0 0 auto; min-width: 64px; padding-inline: 6px; }
+  .navigation > .navigation-link:first-child { margin-left: auto; }
+  .navigation > .navigation-pult-ai { margin-left: auto; }
+  .navigation > .navigation-link:nth-last-child(2) { margin-right: 24px; }
+}
+@media (min-width: 1200px) and (max-width: 1350px) {
+  .navigation { gap: 4px; }
+}
 @media (max-width: 767px) {
   .header-cta { display: none; }
 }
