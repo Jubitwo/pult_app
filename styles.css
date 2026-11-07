@@ -85,10 +85,6 @@ h1, h2, h3 { letter-spacing: -.045em; }
 .app-store-badge { display: block; width: 190px; height: auto; }
 .header-inner > .header-pult-ai { display: none; }
 .pult-ai-page .header-inner > .navigation-pult-ai { margin-left: auto; }
-.header-cta { display: inline-flex; flex: 0 0 auto; order: 3; min-height: 40px; align-items: center; padding: 0 18px; border-radius: 999px; background: var(--brand-dark); color: #fff; font-weight: 650; font-size: 15px; text-decoration: none; opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 200ms, transform 200ms, visibility 200ms; }
-.header-cta[hidden] { display: none; }
-.header-cta.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
-.header-cta:hover { background: var(--brand); }
 @media (min-width: 1200px) {
   .navigation { justify-content: flex-start; gap: clamp(6px, 1.2vw, 20px); }
   .navigation > .navigation-link { flex: 0 0 auto; min-width: 64px; padding-inline: 6px; }
@@ -98,12 +94,6 @@ h1, h2, h3 { letter-spacing: -.045em; }
 }
 @media (min-width: 1200px) and (max-width: 1350px) {
   .navigation { gap: 4px; }
-}
-@media (max-width: 767px) {
-  .header-cta { display: none; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .header-cta { transition: none !important; transform: none; }
 }
 
 .button {
@@ -621,21 +611,24 @@ img[src*="/assets/images/web/web-pult-"] { filter: drop-shadow(0 16px 28px rgba(
 }
 
 @media (min-width: 1200px) {
-  body:not(.pult-ai-page) .hero { overflow: hidden; }
+  body:not(.pult-ai-page) .hero { overflow: hidden; padding-top: clamp(16px, 2vw, 32px); }
+  body:not(.pult-ai-page) .hero-grid { gap: 16px; }
   body:not(.pult-ai-page) .hero-visual {
-    width: max(min(1080px, 62vw), calc(50vw + 112px));
+    width: clamp(980px, 68vw, 1500px);
     justify-self: start;
-    /* Bildanfang: Container-Rand + linke 5/12-Spalte + 32px Luecke + 24px Innenabstand. */
-    --hero-fade-edge: calc(50vw + min(var(--content-width), calc(100vw - var(--page-gutter) * 2)) / 12 - 128px / 3);
   }
   body:not(.pult-ai-page) .hero-visual .screenshot-trigger img {
     max-width: 100%;
-    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 80%, transparent min(100%, var(--hero-fade-edge)));
-    mask-image: linear-gradient(to right, #000 0%, #000 80%, transparent min(100%, var(--hero-fade-edge)));
+    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 80%, transparent 100%);
+    mask-image: linear-gradient(to right, #000 0%, #000 80%, transparent 100%);
   }
   @supports (overflow-x: clip) {
     body:not(.pult-ai-page) .hero { overflow: visible; overflow-x: clip; }
   }
+}
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+  body:not(.pult-ai-page) .hero figure.hero-visual { padding-left: 0; padding-right: 48px; }
 }
 
 @media (max-width: 1199px) {
