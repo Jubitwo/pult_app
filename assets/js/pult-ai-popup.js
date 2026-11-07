@@ -3,7 +3,6 @@
   if (!(dialog instanceof HTMLDialogElement)) return;
 
   const storageKey = "pultAiPopupGesehen-v1";
-  const actionLinks = dialog.querySelectorAll("[data-pult-ai-seen]");
   const closeButton = dialog.querySelector(".pult-ai-close");
   let previouslyFocused = null;
   let previousScrollPosition = 0;
@@ -42,7 +41,11 @@
   if (document.readyState === "complete") schedulePopup();
   else window.addEventListener("load", schedulePopup, { once: true });
 
-  actionLinks.forEach((link) => link.addEventListener("click", markPopupSeen));
+  dialog.addEventListener("click", (event) => {
+    if (event.target instanceof Element && event.target.closest("[data-pult-ai-seen]")) {
+      markPopupSeen();
+    }
+  });
   closeButton.addEventListener("click", () => dialog.close());
   dialog.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {

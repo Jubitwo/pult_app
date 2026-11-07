@@ -1,4 +1,4 @@
-import { siteConfig } from "./config.js?v=local-data-policy";
+import { siteConfig } from "./config.js?v=pult-ai-appstore-20261107";
 
 document.documentElement.classList.add("js");
 
@@ -47,6 +47,13 @@ for (const element of document.querySelectorAll("[data-config-link]")) {
   link.className = element.className.replace("footer-link-pending", "").replace("button-disabled", "").trim();
   link.href = href;
   link.setAttribute("aria-label", element.dataset.configLabel || setting.label);
+  for (const attribute of element.attributes) {
+    if (attribute.name.startsWith("data-")
+      && attribute.name !== "data-config-link"
+      && attribute.name !== "data-config-label") {
+      link.setAttribute(attribute.name, attribute.value);
+    }
+  }
   while (element.firstChild) link.append(element.firstChild);
   if (setting.external) {
     link.target = "_blank";

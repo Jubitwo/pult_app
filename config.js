@@ -1,7 +1,6 @@
 export const siteConfig = Object.freeze({
   appStoreUrl: "https://apple.co/3SJPB01",
-  // Temporary destination until the PULT AI App Store listing is available.
-  pultAiAppStoreUrl: "https://pult-app.de/",
+  pultAiAppStoreUrl: "https://apps.apple.com/de/app/pult-ai/id6828437689",
   contactEmail: "hallo@pult-app.de",
   domain: "https://pult-app.de",
   legalNoticeUrl: "./impressum.html",

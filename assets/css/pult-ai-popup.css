@@ -127,6 +127,8 @@
   margin-top: auto;
 }
 
+.pult-ai-actions .app-store-badge { width: 160px; max-width: 100%; }
+
 .pult-ai-more,
 .pult-ai-security-link {
   display: inline-flex;
