@@ -611,16 +611,39 @@ img[src*="/assets/images/web/web-pult-"] { filter: drop-shadow(0 16px 28px rgba(
 }
 
 @media (min-width: 1200px) {
-  body:not(.pult-ai-page) .hero { overflow: hidden; padding-top: clamp(16px, 2vw, 32px); }
-  body:not(.pult-ai-page) .hero-grid { gap: 16px; }
+  body:not(.pult-ai-page) .hero { position: relative; overflow: hidden; padding-top: clamp(16px, 2vw, 32px); }
+  body:not(.pult-ai-page) .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: clamp(160px, 16vw, 320px);
+    background: linear-gradient(to right, rgb(255 255 255 / 0), #fff 85%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  body:not(.pult-ai-page) .hero-grid { grid-template-columns: minmax(0, min(600px, 50%)) minmax(0, 1fr); gap: clamp(24px, 3vw, 56px); }
+  body:not(.pult-ai-page) .hero-copy { max-width: 600px; justify-content: center; }
+  body:not(.pult-ai-page) .hero-heading { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 18px; }
+  body:not(.pult-ai-page) .hero-heading h1 { font-size: clamp(64px, 5.6vw, 96px); }
+  body:not(.pult-ai-page) .hero-logo {
+    display: block;
+    width: auto;
+    height: 2.04em;
+    font-size: 80px;
+    object-fit: contain;
+    transform: translateY(.15625em) scale(.9421);
+    transform-origin: top left;
+  }
+  body:not(.pult-ai-page) .hero-description { font-size: 19px; max-width: 560px; }
+  body:not(.pult-ai-page) .hero-actions .app-store-badge { width: 230px; }
   body:not(.pult-ai-page) .hero-visual {
-    width: clamp(980px, 68vw, 1500px);
+    width: clamp(900px, 60vw, 1300px);
     justify-self: start;
   }
   body:not(.pult-ai-page) .hero-visual .screenshot-trigger img {
     max-width: 100%;
-    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 80%, transparent 100%);
-    mask-image: linear-gradient(to right, #000 0%, #000 80%, transparent 100%);
   }
   @supports (overflow-x: clip) {
     body:not(.pult-ai-page) .hero { overflow: visible; overflow-x: clip; }
@@ -628,7 +651,7 @@ img[src*="/assets/images/web/web-pult-"] { filter: drop-shadow(0 16px 28px rgba(
 }
 
 @media (min-width: 1200px) and (max-width: 1350px) {
-  body:not(.pult-ai-page) .hero figure.hero-visual { padding-left: 0; padding-right: 48px; }
+  body:not(.pult-ai-page) .hero figure.hero-visual { padding-left: 0; padding-right: 160px; }
 }
 
 @media (max-width: 1199px) {
