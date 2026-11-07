@@ -47,6 +47,7 @@ for (const element of document.querySelectorAll("[data-config-link]")) {
   link.className = element.className.replace("footer-link-pending", "").replace("button-disabled", "").trim();
   link.href = href;
   link.setAttribute("aria-label", element.dataset.configLabel || setting.label);
+  link.hidden = element.hidden;
   for (const attribute of element.attributes) {
     if (attribute.name.startsWith("data-")
       && attribute.name !== "data-config-link"
@@ -60,6 +61,23 @@ for (const element of document.querySelectorAll("[data-config-link]")) {
     link.rel = "noopener noreferrer";
   }
   element.replaceWith(link);
+}
+
+const headerCta = document.querySelector(".header-cta");
+const heroStoreLink = document.querySelector(".hero-actions .app-store-link");
+
+if (headerCta && heroStoreLink) {
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(([entry]) => {
+      headerCta.classList.toggle("is-visible", !entry.isIntersecting);
+    }, {
+      rootMargin: `-${document.querySelector(".site-header").getBoundingClientRect().height}px 0px 0px 0px`,
+    });
+    observer.observe(heroStoreLink);
+    headerCta.hidden = false;
+  } else {
+    console.warn("Der Laden-Button bleibt ausgeblendet: IntersectionObserver wird nicht unterstützt.");
+  }
 }
 
 document.querySelectorAll("img[srcset]").forEach((image) => {
