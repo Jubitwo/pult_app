@@ -1,4 +1,4 @@
-import { siteConfig } from "./config.js?v=pult-ai-appstore-20261107";
+import { siteConfig } from "./config.js?v=mac-20261111";
 
 document.documentElement.classList.add("js");
 
@@ -61,6 +61,10 @@ for (const element of document.querySelectorAll("[data-config-link]")) {
     link.rel = "noopener noreferrer";
   }
   element.replaceWith(link);
+}
+
+if (siteConfig.macBanner !== true) {
+  document.querySelectorAll(".mac-banner").forEach((banner) => banner.remove());
 }
 
 document.querySelectorAll("img[srcset]").forEach((image) => {
